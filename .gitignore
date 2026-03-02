@@ -1,28 +1,29 @@
 # =============================
 # Environment & Secrets
 # =============================
-.env
+venv/
+env/
+.venv/
+/.env
 .env.*
 ingestion/config.py
+
 
 # =============================
 # Python
 # =============================
 __pycache__/
+/*.pyc
 *.py[cod]
 *$py.class
 .ipynb_checkpoints/
 
-# Virtual environments
-venv/
-env/
-.venv/
 
 # =============================
 # Data
 # =============================
 data/raw/
-data/processed/
+/data/backups/
 data/cache/
 
 
