@@ -1,3 +1,8 @@
+-- ==========================================
+-- PLAYER PERIOD SUMMARY
+-- ==========================================
+-- Core recap statistics for a player over a period
+
 CREATE TABLE player_period_stats (
     period_type TEXT,
     period_id TEXT,
@@ -36,6 +41,10 @@ CREATE TABLE player_period_stats (
 );
 
 
+-- ==========================================
+-- PLAYER AGENT PERFORMANCE
+-- ==========================================
+
 CREATE TABLE player_agent_period_stats (
     period_type TEXT,
     period_id TEXT,
@@ -59,6 +68,9 @@ CREATE TABLE player_agent_period_stats (
 );
 
 
+-- ==========================================
+-- PLAYER MAP PERFORMANCE
+-- ==========================================
 
 CREATE TABLE player_map_period_stats (
     period_type TEXT,
@@ -79,6 +91,10 @@ CREATE TABLE player_map_period_stats (
 );
 
 
+-- ==========================================
+-- PLAYER WEAPON PERFORMANCE
+-- ==========================================
+
 CREATE TABLE player_weapon_period_stats (
     period_type TEXT,
     period_id TEXT,
@@ -95,6 +111,10 @@ CREATE TABLE player_weapon_period_stats (
     PRIMARY KEY (period_type, period_id, player_puuid, weapon)
 );
 
+
+-- ==========================================
+-- HIGHLIGHT / FUN METRICS
+-- ==========================================
 
 CREATE TABLE player_highlight_period_stats (
     period_type TEXT,
@@ -114,5 +134,3 @@ CREATE TABLE player_highlight_period_stats (
 
     PRIMARY KEY (period_type, period_id, player_puuid)
 );
-
-
