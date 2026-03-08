@@ -49,8 +49,6 @@ ON player_map_period_stats(player_puuid);
 CREATE INDEX idx_weapon_period_player
 ON player_weapon_period_stats(player_puuid);
 
-CREATE INDEX idx_session_period_player
-ON player_session_period_stats(player_puuid);
 
 CREATE INDEX idx_highlight_period_player
 ON player_highlight_period_stats(player_puuid);

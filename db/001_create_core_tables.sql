@@ -22,12 +22,15 @@ CREATE TABLE players (
 CREATE TABLE matches (
     match_id TEXT PRIMARY KEY,
     date_played TIMESTAMP NOT NULL,
-    map_name TEXT NOT NULL,
+    map TEXT NOT NULL,
     game_mode TEXT NOT NULL,
     season_id TEXT,
+    season_name TEXT,
     act_id TEXT,
+    act_name TEXT,
     game_start TIMESTAMP NOT NULL,
-    game_length_seconds INT
+    game_length_sec INT
+    rounds_played INT,
 );
 
 
@@ -54,6 +57,10 @@ CREATE TABLE match_players (
     bodyshots INT,
     legshots INT,
 
+    afk_rounds INT,
+    friendly_fire_incoming INT,
+    friendly_fire_outgoing INT,
+
     PRIMARY KEY (match_id, player_puuid),
     FOREIGN KEY (match_id) REFERENCES matches(match_id),
     FOREIGN KEY (player_puuid) REFERENCES players(player_puuid)
@@ -70,6 +77,8 @@ CREATE TABLE rounds (
     round_number INT,
     winning_team TEXT,
     round_end_reason TEXT,
+    bomb_planted_player TEXT, -- puuid of player who planted/defused, or NULL
+    bomb_defused_player TEXT, -- puuid of player who planted/defused, or NULL
 
     PRIMARY KEY (match_id, round_number),
     FOREIGN KEY (match_id) REFERENCES matches(match_id)
@@ -82,11 +91,9 @@ CREATE TABLE rounds (
 -- Stores every kill event in a match
 
 CREATE TABLE kill_events (
-    kill_id SERIAL PRIMARY KEY,
-
     match_id TEXT,
     round_number INT,
-    timestamp_ms INT,
+    kill_time_in_round INT,
 
     killer_puuid TEXT,
     victim_puuid TEXT,
@@ -95,7 +102,14 @@ CREATE TABLE kill_events (
     victim_team TEXT,
 
     weapon TEXT,
-    headshot BOOLEAN,
+
+    PRIMARY KEY (
+            match_id,
+            round_number,
+            kill_time_in_round,
+            killer_puuid,
+            victim_puuid
+        ),
 
     FOREIGN KEY (match_id) REFERENCES matches(match_id)
 );
@@ -107,8 +121,6 @@ CREATE TABLE kill_events (
 -- Stores every damage instance
 
 CREATE TABLE damage_events (
-    damage_id SERIAL PRIMARY KEY,
-
     match_id TEXT,
     round_number INT,
 
@@ -116,11 +128,16 @@ CREATE TABLE damage_events (
     receiver_puuid TEXT,
 
     damage INT,
-    headshot INT,
-    bodyshot INT,
-    legshot INT,
+    headshots INT,
+    bodyshots INT,
+    legshots INT,
 
-    FOREIGN KEY (match_id) REFERENCES matches(match_id)
+    PRIMARY KEY (
+        match_id,
+        round_number,
+        attacker_puuid,
+        receiver_puuid
+    )
 );
 
 
@@ -171,9 +188,9 @@ CREATE TABLE player_weapon_kills (
     kills INT,
 
     damage INT,
-    headshot INT,
-    bodyshot INT,
-    legshot INT,
+    headshots INT,
+    bodyshots INT,
+    legshots INT,
 
     PRIMARY KEY (match_id, player_puuid, weapon)
 );
