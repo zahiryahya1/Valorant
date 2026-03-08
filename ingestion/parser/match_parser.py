@@ -4,40 +4,14 @@
 # Parses Riot API match JSON into normalized tables.
 #
 # Design Goals:
+# - Safe parsing (handles null and missing keys)
 # - Single-pass round parsing
 # - Event extractor pattern for scalability
 # - Clean architecture for analytics pipelines
 # ==========================================================
 
 
-# ==========================================================
-# SAFE JSON ACCESS HELPER
-# ==========================================================
-
-def safe_get(data, *keys, default=None):
-
-    current = data
-
-    for key in keys:
-
-        if current is None:
-            return default
-
-        if isinstance(current, dict):
-            current = current.get(key)
-
-        elif isinstance(current, list) and isinstance(key, int):
-
-            if key < len(current):
-                current = current[key]
-            else:
-                return default
-
-        else:
-            return default
-
-    return current if current is not None else default
-
+from helpers import safe_get
 
 # ==========================================================
 # MAIN MATCH PARSER

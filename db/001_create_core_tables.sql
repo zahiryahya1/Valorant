@@ -10,7 +10,7 @@
 CREATE TABLE players (
     player_puuid TEXT PRIMARY KEY,
     game_name TEXT,
-    tag_line TEXT
+    tag TEXT
 );
 
 
@@ -173,26 +173,4 @@ CREATE TABLE session_matches (
     FOREIGN KEY (session_id) REFERENCES sessions(session_id),
     FOREIGN KEY (match_id) REFERENCES matches(match_id)
 );
-
-
--- ==========================================
--- PLAYER WEAPON KILLS
--- ==========================================
--- Stores kills by weapon per player per match
-
-
-CREATE TABLE player_weapon_kills (
-    match_id TEXT,
-    player_puuid TEXT,
-    weapon TEXT,
-    kills INT,
-
-    damage INT,
-    headshots INT,
-    bodyshots INT,
-    legshots INT,
-
-    PRIMARY KEY (match_id, player_puuid, weapon)
-);
-
 

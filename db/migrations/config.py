@@ -1,1 +1,0 @@
-# DB connection info, API keys, and other config variables should be stored here. This file should not be committed to version control.
