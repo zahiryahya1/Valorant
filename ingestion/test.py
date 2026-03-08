@@ -10,7 +10,7 @@ with open("../data/test/matches.json", "r") as f:
 # each game in the list of matches is a dictionary with keys "metadata", "players", and "rounds".
 matches = matches_data.get("data")
 
-parsed_matches = parse_matches(matches, test_puuid)
+parsed_matches = parse_matches(matches)
 
 with open("match1.json", "w", encoding="utf-8") as f:
     json.dump(parsed_matches, f, ensure_ascii=False, indent=4)

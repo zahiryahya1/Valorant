@@ -26,7 +26,7 @@ if __name__ == "__main__":
             exit(1)
         
         # step 3: Parse Matches
-        parsed_matches = parse_matches(matches, puuid)
+        parsed_matches = parse_matches(matches)
         
         # step 4: Store Parsed Data
         with open("parsed_match.json", "w", encoding="utf-8") as f:
