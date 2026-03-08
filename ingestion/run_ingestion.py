@@ -2,8 +2,13 @@ from fetch_matches import get_user_account_data, get_matches_by_puuid
 
 # --- Entry Point for your Main App ---
 if __name__ == "__main__":
-    name_input = input("Enter Name: ").strip()
-    tag_input = input("Enter Tag: ").strip()
+    
+    # For testing, you can hardcode a name and tag here
+    name_input = "Captain Ignant"
+    tag_input = "goat"    
+    
+    # name_input = input("Enter Name: ").strip()
+    # tag_input = input("Enter Tag: ").strip()
 
     # Step 1: Get ID/Region
     puuid, region = get_user_account_data(name_input, tag_input)
@@ -20,4 +25,5 @@ if __name__ == "__main__":
         print("Could not proceed without valid user data.")
         
     print("Ingestion process completed.")
+    
     

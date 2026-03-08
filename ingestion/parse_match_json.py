@@ -1,191 +1,278 @@
-# for each match in match json, extract relevant data.
+# ==========================================================
+# Valorant Match Parser
+# ==========================================================
+# Parses Riot API match JSON into normalized tables.
+#
+# Design Goals:
+# - Safe parsing (handles null and missing keys)
+# - Single-pass round parsing
+# - Event extractor pattern for scalability
+# - Clean architecture for analytics pipelines
+# ==========================================================
 
+
+# ==========================================================
+# SAFE JSON ACCESS HELPER
+# ==========================================================
+
+def safe_get(data, *keys, default=None):
+
+    current = data
+
+    for key in keys:
+
+        if current is None:
+            return default
+
+        # dictionary access
+        if isinstance(current, dict):
+            current = current.get(key)
+
+        # list access
+        elif isinstance(current, list) and isinstance(key, int):
+
+            if key < len(current):
+                current = current[key]
+            else:
+                return default
+
+        else:
+            return default
+
+    return current if current is not None else default
+
+
+# ==========================================================
+# MAIN MATCH PARSER
+# ==========================================================
 
 def parse_matches(matches, puuid):
-    
-    parsed_matches = []
-    
-    for match in matches:
-        
-        metadata = match.get("metadata")
-        parsed_metatdata = parse_metadata(metadata)
-        match_id = parsed_metatdata.get("match_id")
 
-        # determine which team has won to update player stats accordingly.
-        red_has_won = match.get("teams").get("red").get("has_won")    
-        
-        players = match.get("players").get("all_players")
-        
-        stats = parse_match_player_stats(players, puuid, match_id, red_has_won)
-        
-        rounds = match.get("rounds")
-        parsed_rounds = parse_rounds(rounds, puuid, match_id)
-        
-        parsed_damage_events = parse_damage_events(rounds, puuid, match_id)
-        
-        parsed_kill_events = parse_kill_events(match, puuid, match_id)
-        
-        parsed_match = {
-            "metadata": parsed_metatdata,
-            "player_stats": stats,
-            "rounds": parsed_rounds,
-            "damage_events": parsed_damage_events,
-            "kill_events": parsed_kill_events
-        }
-        
-        parsed_matches.append(parsed_match)
-    
+    parsed_matches = []
+
+    for match in matches:
+
+        metadata = parse_metadata(safe_get(match, "metadata", default={}))
+
+        match_id = metadata["match_id"]
+
+        red_has_won = safe_get(match, "teams", "red", "has_won")
+
+        players = safe_get(match, "players", "all_players", default=[])
+
+        player_stats = parse_match_player_stats(players, puuid, match_id, red_has_won)
+
+        rounds = safe_get(match, "rounds", default=[])
+
+        round_data = parse_rounds(rounds, puuid, match_id)
+
+        kill_events = extract_kill_events(match, puuid, match_id)
+
+        parsed_matches.append({
+
+            "metadata": metadata,
+            "player_stats": player_stats,
+
+            "rounds": round_data["rounds"],
+            "damage_events": round_data["damage_events"],
+
+            "kill_events": kill_events
+        })
+
     return parsed_matches
 
 
+# ==========================================================
+# METADATA PARSER
+# ==========================================================
 
-def parse_metadata(metadata): 
-    
-    parsed = {
-        "match_id": metadata.get("matchid"),
-        "map": metadata.get("map"),
-        "game_mode": metadata.get("mode"),
-        "date_played": metadata.get("game_start_patched"),
-        "game_start": metadata.get("game_start"),
-        "game_length_sec": metadata.get("game_length"),
-        "rounds_played": metadata.get("rounds_played"),
-        "season_id": metadata.get("season_id"),
-        "version": metadata.get("game_version"),
+def parse_metadata(metadata):
+
+    return {
+
+        "match_id": safe_get(metadata, "matchid"),
+        "map": safe_get(metadata, "map"),
+        "game_mode": safe_get(metadata, "mode"),
+
+        "date_played": safe_get(metadata, "game_start_patched"),
+        "game_start": safe_get(metadata, "game_start"),
+
+        "game_length_sec": safe_get(metadata, "game_length"),
+        "rounds_played": safe_get(metadata, "rounds_played"),
+
+        "season_id": safe_get(metadata, "season_id"),
+        "version": safe_get(metadata, "game_version"),
     }
-    
-    return parsed
-    
-    
-def parse_match_player_stats(players, test_puuid, match_id, red_has_won): 
-    
-    # get the stats for the player with the given puuid.
-    for player in players:
-        if player.get("puuid") == test_puuid:
-            player_stats = player
+
+
+# ==========================================================
+# PLAYER STATS PARSER
+# ==========================================================
+
+def parse_match_player_stats(players, target_puuid, match_id, red_has_won):
+
+    player = None
+
+    for p in players:
+
+        if safe_get(p, "puuid") == target_puuid:
+            player = p
             break
-    
-    # determine if the player won or lost the match based on the team they were on and which team won.
-    won = False
-    if red_has_won and player_stats["team"].lower() == "red":
-        won = True
-    
-    stats = player_stats.get("stats")
-    # create a dictionary of the relevant player stats to be inserted into the database.
-    player_stats = {
-        "player_puuid": player_stats.get("puuid"),
+
+    if player is None:
+        return None
+
+    team = safe_get(player, "team", default="").lower()
+
+    won = red_has_won and team == "red"
+
+    stats = safe_get(player, "stats", default={})
+
+    return {
+
+        "player_puuid": safe_get(player, "puuid"),
         "match_id": match_id,
-        "team": player_stats.get("team"),
-        "agent": player_stats.get("character"),
-        "rank": player_stats.get("currenttier_patched"),
+
+        "team": team,
+        "agent": safe_get(player, "character"),
+        "rank": safe_get(player, "currenttier_patched"),
+
         "won": won,
-        
-        "kills": stats.get("kills"),
-        "deaths": stats.get("deaths"),
-        "assists": stats.get("assists"),
-        "score": stats.get("score"),
-        "damage": player_stats.get("damage_made"),
-        
-        "bodyshots": stats.get("bodyshots"),
-        "legshots": stats.get("legshots"),
-        "headshots": stats.get("headshots"),
-        
-        "afk_rounds": player_stats.get("behavior").get("afk_rounds"),
-        "friendly_fire_incoming": player_stats.get("behavior").get("friendly_fire").get("incoming"),
-        "friendly_fire_outgoing": player_stats.get("behavior").get("friendly_fire").get("outgoing"),
+
+        "kills": safe_get(stats, "kills"),
+        "deaths": safe_get(stats, "deaths"),
+        "assists": safe_get(stats, "assists"),
+
+        "score": safe_get(stats, "score"),
+
+        "damage": safe_get(player, "damage_made"),
+
+        "headshots": safe_get(stats, "headshots"),
+        "bodyshots": safe_get(stats, "bodyshots"),
+        "legshots": safe_get(stats, "legshots"),
+
+        "afk_rounds": safe_get(player, "behavior", "afk_rounds"),
+        "friendly_fire_incoming": safe_get(player, "behavior", "friendly_fire", "incoming"),
+        "friendly_fire_outgoing": safe_get(player, "behavior", "friendly_fire", "outgoing"),
     }
-    
-    return player_stats
+
+
+# ==========================================================
+# ROUND PARSER (Single Pass)
+# ==========================================================
 
 def parse_rounds(rounds, puuid, match_id):
-    
-    parsed_rounds = []
-    round_num = 1
-    for round in rounds:
+
+    rounds_table = []
+    damage_events = []
+
+    for round_number, round_data in enumerate(rounds, start=1):
+
+        rounds_table.append(
+            extract_round_summary(round_data, match_id, round_number)
+        )
+
+        damage_events.extend(
+            extract_damage_events(round_data, puuid, match_id, round_number)
+        )
+
+
+    return {
+
+        "rounds": rounds_table,
+        "damage_events": damage_events,
+    }
+
+
+# ==========================================================
+# EVENT EXTRACTORS
+# ==========================================================
+
+
+def extract_round_summary(round_data, match_id, round_number):
+
+    return {
+
+        "match_id": match_id,
+        "round_number": round_number,
+
+        "winning_team": (safe_get(round_data, "winning_team", default="") or "").lower(),
+
+        "round_end_reason": safe_get(round_data, "end_type"),
         
-        planted_by = round.get("plant_events").get("planted_by", {})
-        defunseed_by = round.get("defuse_events").get("defused_by", {})
-        parsed_round = {
-            "match_id": match_id,
-            "round_num": round_num,
-            "winning_team": round.get("winning_team").lower(),
-            "bomb_planted_player": planted_by.get("puuid"),    # I jsut want puuid but i get the player info as a set 
-            "bomb_defused_player": defunseed_by.get("puuid"),
-            "round_end_reason": round.get("end_type")
-        }
+        "bomb_planted_player": safe_get(round_data, "plant_events", "planted_by", "puuid"),
+        "bomb_defused_player": safe_get(round_data, "defuse_events", "defused_by", "puuid")
+    }
+
+
+
+def extract_damage_events(round_data, puuid, match_id, round_number):
+
+    events = []
+
+    player_stats = safe_get(round_data, "player_stats", default=[])
+
+    for player in player_stats:
+
+        damage_events = safe_get(player, "damage_events", default=[])
         
-        parsed_rounds.append(parsed_round)
-        round_num += 1
-    
-    return parsed_rounds
+        attacker = safe_get(player, "player_puuid")
 
-def parse_damage_events(rounds, puuid, match_id):
-    
-    parsed_dmg_events = []
-    round_num = 1
-    for round in rounds:
-        for player_stats in round.get("player_stats"):
-            if player_stats.get("player_puuid") == puuid:
-                # we can also extract player-specific events here if needed.
-                
-                damage_events = player_stats.get("damage_events")
-                
-                for dmg_event in damage_events:
-                    
-                    data = {
-                        "match_id": match_id,
-                        "round_num": round.get("round_num"),
-                        "killer_puuid": dmg_event.get("killer_puuid"),
-                        "victim_puuid": dmg_event.get("victim_puuid"),
-                        "damage": dmg_event.get("damage"),
-                        "damage_type": dmg_event.get("damage_type"),
-                        "is_headshot": dmg_event.get("is_headshot")
-                    }
-                    
-                    parsed_dmg_events.append(data)
-                    break # break here since we only want damage events where the player is the receiver.
-                
-        round_num += 1
-                        
-                        
-    # calculate damage recieved by iterating through all player stats and searching for receiver_puuid = puuid in the damage events. we can also calculate friendly fire damage taken by filtering for events where the killer and receiver are on the same team.
-    round_num = 1
-    for round in rounds:
-        for player_stats in round.get("player_stats"):
-            damage_events = player_stats.get("damage_events")
-            for dmg_event in damage_events:
-                if dmg_event.get("receiver_puuid") == puuid:
-                    data = {
-                        "match_id": match_id,
-                        "round_num": round.get("round_num"),
-                        "attacker_puuid": dmg_event.get("attacker_puuid"),
-                        "receiver_puuid": dmg_event.get("receiver_puuid"),
-                        "damage": dmg_event.get("damage"),
-                        "headshot": dmg_event.get("headshot"),
-                        "bodyshot": dmg_event.get("bodyshot"),
-                        "headshot": dmg_event.get("headshot")
-                    }
-                    parsed_dmg_events.append(data)
-        round_num += 1
-    return parsed_dmg_events
+        for dmg in damage_events:
+
+            receiver = safe_get(dmg, "receiver_puuid")
+
+            if attacker == puuid or receiver == puuid:
+
+                events.append({
+
+                    "match_id": match_id,
+                    "round_number": round_number,
+
+                    "attacker_puuid": attacker,
+                    "receiver_puuid": receiver,
+
+                    "damage": safe_get(dmg, "damage"),
+                    "headshots": safe_get(dmg, "headshots"),
+                    "bodyshots": safe_get(dmg, "bodyshots"),
+                    "legshot": safe_get(dmg, "legshots"),
+                })
+
+    return events
 
 
-def parse_kill_events(match, puuid, match_id):
-    
-    parsed_kill_events = []
+# ==========================================================
+# KILL EVENT PARSER
+# ==========================================================
 
-    kill_events = match.get("kills")
-    
+def extract_kill_events(match, puuid, match_id):
+
+    kill_events = safe_get(match, "kills", default=[])
+
+    parsed = []
+
     for kill in kill_events:
-        if kill.get("killer_puuid") == puuid or kill.get("victim_puuid") == puuid:
-            data = {
+
+        killer = safe_get(kill, "killer_puuid")
+        victim = safe_get(kill, "victim_puuid")
+
+        if killer == puuid or victim == puuid:
+
+            parsed.append({
+
                 "match_id": match_id,
-                "round_num": kill.get("round"),
-                "kill_time_in_round": kill.get("kill_time_in_round"),
-                "killer_puuid": kill.get("killer_puuid"),
-                "victim_puuid": kill.get("victim_puuid"),
-                "killer_team": kill.get("killer_team").lower(),
-                "victim_team": kill.get("victim_team").lower(),
-                "weapon": kill.get("damage_weapon_name"),
-            }
-            parsed_kill_events.append(data)
-    
+
+                "round_number": safe_get(kill, "round"),
+
+                "kill_time_in_round": safe_get(kill, "kill_time_in_round"),
+
+                "killer_puuid": killer,
+                "victim_puuid": victim,
+
+                "killer_team": (safe_get(kill, "killer_team", default="") or "").lower(),
+                "victim_team": (safe_get(kill, "victim_team", default="") or "").lower(),
+
+                "weapon": safe_get(kill, "damage_weapon_name")
+            })
+
+    return parsed
