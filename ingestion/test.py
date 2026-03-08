@@ -1,7 +1,4 @@
-from turtle import clear
-from regex import match
-
-from parse_match_json import parse_matches, parse_metadata, parse_match_player_stats
+from parser import parse_matches
 
 import json
 
@@ -16,4 +13,4 @@ matches = matches_data.get("data")
 parsed_matches = parse_matches(matches, test_puuid)
 
 with open("match1.json", "w", encoding="utf-8") as f:
-    json.dump(parsed_matches[0], f, ensure_ascii=False, indent=4)
+    json.dump(parsed_matches, f, ensure_ascii=False, indent=4)

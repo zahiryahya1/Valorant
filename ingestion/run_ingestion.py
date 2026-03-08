@@ -1,14 +1,14 @@
-from fetch_matches import get_user_account_data, get_matches_by_puuid
+import json
+
+from valorant_api import get_user_account_data, get_matches_by_puuid
+from parser import parse_matches
 
 # --- Entry Point for your Main App ---
 if __name__ == "__main__":
-    
-    # For testing, you can hardcode a name and tag here
-    name_input = "Captain Ignant"
-    tag_input = "goat"    
-    
-    # name_input = input("Enter Name: ").strip()
-    # tag_input = input("Enter Tag: ").strip()
+       
+
+    name_input = input("Enter Name: ").strip()
+    tag_input = input("Enter Tag: ").strip()
 
     # Step 1: Get ID/Region
     puuid, region = get_user_account_data(name_input, tag_input)
@@ -18,12 +18,23 @@ if __name__ == "__main__":
         print(f"Found PUUID: {puuid}. Fetching matches...")
         matches = get_matches_by_puuid(region, puuid)
         
-        if matches:
-            count = len(matches.get('data', []))
-            print(f"Successfully retrieved {count} matches.")
+        with open("raw_match.json", "w", encoding="utf-8") as f:
+            json.dump(matches, f, ensure_ascii=False, indent=4)
+        
+        if matches is None:
+            print("Failed to fetch matches. Exiting.")
+            exit(1)
+        
+        # step 3: Parse Matches
+        parsed_matches = parse_matches(matches, puuid)
+        
+        # step 4: Store Parsed Data
+        with open("parsed_match.json", "w", encoding="utf-8") as f:
+            json.dump(parsed_matches, f, ensure_ascii=False, indent=4)
+        
     else:
         print("Could not proceed without valid user data.")
         
-    print("Ingestion process completed.")
+
     
     
