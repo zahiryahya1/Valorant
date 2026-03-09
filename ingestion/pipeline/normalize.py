@@ -13,14 +13,14 @@ def normalize_tables(parsed_matches):
 
         tables["matches"].append(match["metadata"])
 
-        tables["players"].extend(match["player_info"])
+        tables["players"].extend(match["players_info"])
 
-        tables["player_match_stats"].extend(match["player_stats"])
+        tables["player_match_stats"].extend(match["players_stats"])
 
         tables["rounds"].extend(match["rounds"])
 
         tables["damage_events"].extend(match["damage_events"])
-
+        
         tables["kill_events"].extend(match["kill_events"])
 
 

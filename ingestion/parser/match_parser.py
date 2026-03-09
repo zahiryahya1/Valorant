@@ -10,8 +10,7 @@
 # - Clean architecture for analytics pipelines
 # ==========================================================
 
-
-from helpers import safe_get
+from .helpers import safe_get
 
 # ==========================================================
 # MAIN MATCH PARSER
@@ -186,6 +185,7 @@ def parse_rounds(rounds, context):
             extract_round_summary(round_data, match_id, round_number)
         )
 
+        
         damage_events.extend(
             extract_damage_events(round_data, match_id, round_number)
         )
@@ -220,17 +220,16 @@ def extract_round_summary(round_data, match_id, round_number):
 
 
 def extract_damage_events(round_data, match_id, round_number):
-
+    
     events = []
 
-    player_match_stats = safe_get(round_data, "player_match_stats", default=[])
-
+    player_match_stats = safe_get(round_data, "player_stats", default=[])
     for player in player_match_stats:
 
         damage_events = safe_get(player, "damage_events", default=[])
         
         attacker = safe_get(player, "player_puuid")
-
+        
         for dmg in damage_events:
 
             receiver = safe_get(dmg, "receiver_puuid")
@@ -248,7 +247,7 @@ def extract_damage_events(round_data, match_id, round_number):
                 "bodyshots": int(safe_get(dmg, "bodyshots", default=0)),
                 "legshot": int(safe_get(dmg, "legshots", default=0)),
             })
-
+        
     return events
 
 
