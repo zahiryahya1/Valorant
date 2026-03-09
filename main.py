@@ -1,4 +1,6 @@
 import json
+import logging
+from logs.logging_config import *
 
 from ingestion.pipeline.normalize import normalize_tables
 from ingestion.valorant_api import get_user_account_data, get_matches_by_puuid
@@ -12,13 +14,20 @@ if __name__ == "__main__":
     tag_input = input("Enter Tag: ").strip()
 
     # Step 1: Get ID/Region
-    puuid, region = get_user_account_data(name_input, tag_input)
+    logging.info("Starting match ingestion pipeline")
+    
+    try:
+        puuid, region = get_user_account_data(name_input, tag_input)
+        logging.info("Fetched account data successfully")
+    except Exception as e:
+        logging.error(f"Error occurred while fetching user account data: {e}. Account may not not be public or may not exist.")
+        exit(1)
 
     if puuid and region:
         # Step 2: Get Matches using the ID from Step 1
-        print(f"Found PUUID: {puuid}. Fetching matches...")
         raw_matches = get_matches_by_puuid(region, puuid)
         
+        # Store raw matches for debugging/inspection. Remove later!
         with open("raw_match.json", "w", encoding="utf-8") as f:
             json.dump(raw_matches, f, ensure_ascii=False, indent=4)
         
@@ -27,8 +36,13 @@ if __name__ == "__main__":
             exit(1)
         
         # step 3: Parse Matches
-        parsed_matches = parse_matches(raw_matches)
-        
+        try:
+            parsed_matches = parse_matches(raw_matches)
+            logging.info(f"Parsed {len(parsed_matches)} matches")
+        except Exception as e:
+            logging.error(f"Error occurred while parsing matches: {e}")
+            exit(1)
+
         # step 4: Store Parsed Data
         with open("parsed_match.json", "w", encoding="utf-8") as f:
             json.dump(parsed_matches, f, ensure_ascii=False, indent=4)
@@ -40,7 +54,7 @@ if __name__ == "__main__":
     
     # inspecting the normalized tables
     for table_name, records in tables.items():
-        print(f"Table: {table_name}, Number of Records: {len(records)}")
+        logging.info(f"Table: {table_name}, Number of Records: {len(records)}")
         
         
     
