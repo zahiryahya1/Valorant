@@ -5,3 +5,4 @@ used to install the required libraries for the project
 request is to call apis and 
 python-dotenv is used to securely store api key
 
+pip install colorlog

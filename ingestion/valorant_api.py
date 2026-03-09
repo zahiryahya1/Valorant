@@ -1,3 +1,4 @@
+import logging
 import os
 import requests
 from dotenv import load_dotenv
@@ -26,7 +27,7 @@ def get_session() -> requests.Session:
 # -----------------------------
 # API functions
 # -----------------------------
-def get_user_account_data(name: str, tag: str) -> Tuple[Optional[str], Optional[str]]:
+def get_user_account_data(name: str, tag: str) -> Tuple[Optional[str], Optional[str], Optional[Exception]]:
     """Fetches PUUID and region for a Valorant account."""
     session = get_session()
     url = f"{BASE_URL}/v2/account/{name}/{tag}"
@@ -34,10 +35,9 @@ def get_user_account_data(name: str, tag: str) -> Tuple[Optional[str], Optional[
         response = session.get(url)
         response.raise_for_status()
         data = response.json().get("data", {})
-        return data.get("puuid"), data.get("region")
+        return data.get("puuid"), data.get("region"), None
     except requests.exceptions.RequestException as e:
-        print(f"[ERROR] Failed to fetch account {name}#{tag}: {e}")
-        return None, None
+        return None, None, e
 
 def get_matches_by_puuid(region: str, puuid: str) -> Optional[Dict[str, Any]]:
     """Fetches match history for a given region and PUUID."""
