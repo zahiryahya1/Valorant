@@ -8,7 +8,7 @@
 -- later for multiple users.
 
 CREATE TABLE players (
-    player_puuid TEXT PRIMARY KEY,
+    puuid TEXT PRIMARY KEY,
     game_name TEXT,
     tag TEXT
 );
@@ -29,8 +29,8 @@ CREATE TABLE matches (
     act_id TEXT,
     act_name TEXT,
     game_start TIMESTAMP NOT NULL,
-    game_length_sec INT
-    rounds_played INT,
+    game_length_sec INT,
+    rounds_played INT
 );
 
 
@@ -39,9 +39,9 @@ CREATE TABLE matches (
 -- ==========================================
 -- One row per player per match
 
-CREATE TABLE match_players (
+CREATE TABLE player_match_stats (
     match_id TEXT,
-    player_puuid TEXT,
+    puuid TEXT,
     team TEXT,
     agent TEXT,
     rank INT,

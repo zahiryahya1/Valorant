@@ -2,6 +2,8 @@
 # SAFE JSON ACCESS HELPER
 # ==========================================================
 
+from datetime import datetime
+
 # - Safe parsing (handles null and missing keys)
 def safe_get(data, *keys, default=None):
 
@@ -26,3 +28,7 @@ def safe_get(data, *keys, default=None):
             return default
 
     return current if current is not None else default
+
+
+def parse_game_date(date_str):
+    return datetime.strptime(date_str, "%A, %B %d, %Y %I:%M %p")

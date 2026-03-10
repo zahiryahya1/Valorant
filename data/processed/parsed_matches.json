@@ -13,59 +13,59 @@
         },
         "players_info": [
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "game_name": "Captain Ignant",
                 "tag": "goat"
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "game_name": "kupopuffs",
                 "tag": "420"
             },
             {
-                "player_puuid": "0098288c-5e66-5378-8c98-b66f33c34a83",
+                "puuid": "0098288c-5e66-5378-8c98-b66f33c34a83",
                 "game_name": "glockinmysock",
                 "tag": "0555"
             },
             {
-                "player_puuid": "71bcdd2f-4efc-5c3b-bc20-695bbe7b832b",
+                "puuid": "71bcdd2f-4efc-5c3b-bc20-695bbe7b832b",
                 "game_name": "lannoc539",
                 "tag": "3952"
             },
             {
-                "player_puuid": "f436b655-9d42-598b-8b1c-8047448444cd",
+                "puuid": "f436b655-9d42-598b-8b1c-8047448444cd",
                 "game_name": "tortlee",
                 "tag": "1928"
             },
             {
-                "player_puuid": "308a3618-1b25-523e-a7a0-f9ace4a10230",
+                "puuid": "308a3618-1b25-523e-a7a0-f9ace4a10230",
                 "game_name": "thisismyapple",
                 "tag": "2835"
             },
             {
-                "player_puuid": "fa3d4d70-bcd9-56df-9a5d-427bfe55b78f",
+                "puuid": "fa3d4d70-bcd9-56df-9a5d-427bfe55b78f",
                 "game_name": "alejandrxii",
                 "tag": "7300"
             },
             {
-                "player_puuid": "7d97ab31-d268-5cd6-96f9-d0f052d12ced",
+                "puuid": "7d97ab31-d268-5cd6-96f9-d0f052d12ced",
                 "game_name": "Vempts",
                 "tag": "6969"
             },
             {
-                "player_puuid": "08360a63-5e25-521c-8825-7f6864f35b67",
+                "puuid": "08360a63-5e25-521c-8825-7f6864f35b67",
                 "game_name": "my girl the best",
                 "tag": "luvhr"
             },
             {
-                "player_puuid": "a0779df8-d490-592a-8eb9-d540dfb40df0",
+                "puuid": "a0779df8-d490-592a-8eb9-d540dfb40df0",
                 "game_name": "missmape",
                 "tag": "6160"
             }
         ],
         "players_stats": [
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "blue",
                 "agent": "phoenix",
@@ -84,7 +84,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "blue",
                 "agent": "sage",
@@ -103,7 +103,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "0098288c-5e66-5378-8c98-b66f33c34a83",
+                "puuid": "0098288c-5e66-5378-8c98-b66f33c34a83",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "red",
                 "agent": "chamber",
@@ -122,7 +122,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "71bcdd2f-4efc-5c3b-bc20-695bbe7b832b",
+                "puuid": "71bcdd2f-4efc-5c3b-bc20-695bbe7b832b",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "red",
                 "agent": "yoru",
@@ -141,7 +141,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "f436b655-9d42-598b-8b1c-8047448444cd",
+                "puuid": "f436b655-9d42-598b-8b1c-8047448444cd",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "blue",
                 "agent": "skye",
@@ -160,7 +160,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "308a3618-1b25-523e-a7a0-f9ace4a10230",
+                "puuid": "308a3618-1b25-523e-a7a0-f9ace4a10230",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "blue",
                 "agent": "neon",
@@ -179,7 +179,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "fa3d4d70-bcd9-56df-9a5d-427bfe55b78f",
+                "puuid": "fa3d4d70-bcd9-56df-9a5d-427bfe55b78f",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "blue",
                 "agent": "brimstone",
@@ -198,7 +198,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "7d97ab31-d268-5cd6-96f9-d0f052d12ced",
+                "puuid": "7d97ab31-d268-5cd6-96f9-d0f052d12ced",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "red",
                 "agent": "brimstone",
@@ -217,7 +217,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "08360a63-5e25-521c-8825-7f6864f35b67",
+                "puuid": "08360a63-5e25-521c-8825-7f6864f35b67",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "red",
                 "agent": "waylay",
@@ -236,7 +236,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "a0779df8-d490-592a-8eb9-d540dfb40df0",
+                "puuid": "a0779df8-d490-592a-8eb9-d540dfb40df0",
                 "match_id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
                 "team": "red",
                 "agent": "tejo",
@@ -4948,59 +4948,59 @@
         },
         "players_info": [
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "game_name": "kupopuffs",
                 "tag": "420"
             },
             {
-                "player_puuid": "adf54084-6704-5f9d-88fe-48e999b95d03",
+                "puuid": "adf54084-6704-5f9d-88fe-48e999b95d03",
                 "game_name": "buoi",
                 "tag": "beooo"
             },
             {
-                "player_puuid": "528dc71a-63c6-5601-8d3f-5a146cfce0b2",
+                "puuid": "528dc71a-63c6-5601-8d3f-5a146cfce0b2",
                 "game_name": "RBOK47",
                 "tag": "SWAG"
             },
             {
-                "player_puuid": "74fa1fd1-00f4-52aa-a5aa-fa602ea5ed51",
+                "puuid": "74fa1fd1-00f4-52aa-a5aa-fa602ea5ed51",
                 "game_name": "Oog",
                 "tag": "444"
             },
             {
-                "player_puuid": "d9b170e6-3627-539a-8da1-b7d4b1c2cd06",
+                "puuid": "d9b170e6-3627-539a-8da1-b7d4b1c2cd06",
                 "game_name": "FadedTradez",
                 "tag": "NA1"
             },
             {
-                "player_puuid": "a61918a0-306c-5e45-ab51-3358a3c10689",
+                "puuid": "a61918a0-306c-5e45-ab51-3358a3c10689",
                 "game_name": "SailorMercury",
                 "tag": "123"
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "game_name": "Captain Ignant",
                 "tag": "goat"
             },
             {
-                "player_puuid": "23cc217a-739e-5c7e-a43e-92804b04b627",
+                "puuid": "23cc217a-739e-5c7e-a43e-92804b04b627",
                 "game_name": "MajinDuck",
                 "tag": "1011"
             },
             {
-                "player_puuid": "d9ffe28b-1b5c-5039-a9fd-0171fb74de51",
+                "puuid": "d9ffe28b-1b5c-5039-a9fd-0171fb74de51",
                 "game_name": "AlexTheBigN00B",
                 "tag": "NA1"
             },
             {
-                "player_puuid": "c966636a-35b7-5301-9065-153c6f0e0203",
+                "puuid": "c966636a-35b7-5301-9065-153c6f0e0203",
                 "game_name": "Mr A",
                 "tag": "loveU"
             }
         ],
         "players_stats": [
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "red",
                 "agent": "sage",
@@ -5019,7 +5019,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "adf54084-6704-5f9d-88fe-48e999b95d03",
+                "puuid": "adf54084-6704-5f9d-88fe-48e999b95d03",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "red",
                 "agent": "clove",
@@ -5038,7 +5038,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "528dc71a-63c6-5601-8d3f-5a146cfce0b2",
+                "puuid": "528dc71a-63c6-5601-8d3f-5a146cfce0b2",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "blue",
                 "agent": "reyna",
@@ -5057,7 +5057,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "74fa1fd1-00f4-52aa-a5aa-fa602ea5ed51",
+                "puuid": "74fa1fd1-00f4-52aa-a5aa-fa602ea5ed51",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "red",
                 "agent": "sova",
@@ -5076,7 +5076,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "d9b170e6-3627-539a-8da1-b7d4b1c2cd06",
+                "puuid": "d9b170e6-3627-539a-8da1-b7d4b1c2cd06",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "red",
                 "agent": "gekko",
@@ -5095,7 +5095,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "a61918a0-306c-5e45-ab51-3358a3c10689",
+                "puuid": "a61918a0-306c-5e45-ab51-3358a3c10689",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "blue",
                 "agent": "clove",
@@ -5114,7 +5114,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "red",
                 "agent": "phoenix",
@@ -5133,7 +5133,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "23cc217a-739e-5c7e-a43e-92804b04b627",
+                "puuid": "23cc217a-739e-5c7e-a43e-92804b04b627",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "blue",
                 "agent": "omen",
@@ -5152,7 +5152,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "d9ffe28b-1b5c-5039-a9fd-0171fb74de51",
+                "puuid": "d9ffe28b-1b5c-5039-a9fd-0171fb74de51",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "blue",
                 "agent": "gekko",
@@ -5171,7 +5171,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "c966636a-35b7-5301-9065-153c6f0e0203",
+                "puuid": "c966636a-35b7-5301-9065-153c6f0e0203",
                 "match_id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
                 "team": "blue",
                 "agent": "chamber",
@@ -9451,29 +9451,29 @@
         },
         "players_info": [
             {
-                "player_puuid": "c6ea6bd1-2b05-5ae8-9fe7-e1e5e31ac0a9",
+                "puuid": "c6ea6bd1-2b05-5ae8-9fe7-e1e5e31ac0a9",
                 "game_name": "Howidothat",
                 "tag": "SEN1"
             },
             {
-                "player_puuid": "7270597f-c8b9-59c5-aa69-6c1eaa0339ff",
+                "puuid": "7270597f-c8b9-59c5-aa69-6c1eaa0339ff",
                 "game_name": "TAKOYAKII",
                 "tag": "2886"
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "game_name": "Captain Ignant",
                 "tag": "goat"
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "game_name": "kupopuffs",
                 "tag": "420"
             }
         ],
         "players_stats": [
             {
-                "player_puuid": "c6ea6bd1-2b05-5ae8-9fe7-e1e5e31ac0a9",
+                "puuid": "c6ea6bd1-2b05-5ae8-9fe7-e1e5e31ac0a9",
                 "match_id": "d262b3f2-6157-4eaa-84d7-a3c0297ba329",
                 "team": "blue",
                 "agent": "sova",
@@ -9492,7 +9492,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "7270597f-c8b9-59c5-aa69-6c1eaa0339ff",
+                "puuid": "7270597f-c8b9-59c5-aa69-6c1eaa0339ff",
                 "match_id": "d262b3f2-6157-4eaa-84d7-a3c0297ba329",
                 "team": "blue",
                 "agent": "chamber",
@@ -9511,7 +9511,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "match_id": "d262b3f2-6157-4eaa-84d7-a3c0297ba329",
                 "team": "red",
                 "agent": "tejo",
@@ -9530,7 +9530,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "match_id": "d262b3f2-6157-4eaa-84d7-a3c0297ba329",
                 "team": "red",
                 "agent": "harbor",
@@ -10191,59 +10191,59 @@
         },
         "players_info": [
             {
-                "player_puuid": "87a1c3e8-578e-5f57-b679-4eda4030c09c",
+                "puuid": "87a1c3e8-578e-5f57-b679-4eda4030c09c",
                 "game_name": "GhostGoCleep",
                 "tag": "1884"
             },
             {
-                "player_puuid": "90cbf091-7b11-506c-b320-807961b9c3f2",
+                "puuid": "90cbf091-7b11-506c-b320-807961b9c3f2",
                 "game_name": "scourn",
                 "tag": "XIII"
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "game_name": "kupopuffs",
                 "tag": "420"
             },
             {
-                "player_puuid": "8fa1d123-4da6-5980-b5a4-0191167e15fd",
+                "puuid": "8fa1d123-4da6-5980-b5a4-0191167e15fd",
                 "game_name": "done",
                 "tag": "ggs"
             },
             {
-                "player_puuid": "c5a7fd98-e842-5020-84bf-7c68f36eae4b",
+                "puuid": "c5a7fd98-e842-5020-84bf-7c68f36eae4b",
                 "game_name": "Kyro",
                 "tag": "BLM"
             },
             {
-                "player_puuid": "69fdca94-2c2e-59ba-b84b-5b2ff049a518",
+                "puuid": "69fdca94-2c2e-59ba-b84b-5b2ff049a518",
                 "game_name": "ore wa zettai da",
                 "tag": "teiko"
             },
             {
-                "player_puuid": "4b7cedee-b7af-5e1e-a27e-9516f38e0f49",
+                "puuid": "4b7cedee-b7af-5e1e-a27e-9516f38e0f49",
                 "game_name": "3rdWardDoves",
                 "tag": "Yng16"
             },
             {
-                "player_puuid": "08aace12-7859-5bfc-99a8-701034a1215b",
+                "puuid": "08aace12-7859-5bfc-99a8-701034a1215b",
                 "game_name": "TwoFace",
                 "tag": "DED"
             },
             {
-                "player_puuid": "3dbb7348-0207-5e6a-b42f-cb0ea37473db",
+                "puuid": "3dbb7348-0207-5e6a-b42f-cb0ea37473db",
                 "game_name": "Beefyman",
                 "tag": "Beef"
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "game_name": "Captain Ignant",
                 "tag": "goat"
             }
         ],
         "players_stats": [
             {
-                "player_puuid": "87a1c3e8-578e-5f57-b679-4eda4030c09c",
+                "puuid": "87a1c3e8-578e-5f57-b679-4eda4030c09c",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "blue",
                 "agent": "chamber",
@@ -10262,7 +10262,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "90cbf091-7b11-506c-b320-807961b9c3f2",
+                "puuid": "90cbf091-7b11-506c-b320-807961b9c3f2",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "blue",
                 "agent": "reyna",
@@ -10281,7 +10281,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "red",
                 "agent": "clove",
@@ -10300,7 +10300,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "8fa1d123-4da6-5980-b5a4-0191167e15fd",
+                "puuid": "8fa1d123-4da6-5980-b5a4-0191167e15fd",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "red",
                 "agent": "skye",
@@ -10319,7 +10319,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "c5a7fd98-e842-5020-84bf-7c68f36eae4b",
+                "puuid": "c5a7fd98-e842-5020-84bf-7c68f36eae4b",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "red",
                 "agent": "reyna",
@@ -10338,7 +10338,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "69fdca94-2c2e-59ba-b84b-5b2ff049a518",
+                "puuid": "69fdca94-2c2e-59ba-b84b-5b2ff049a518",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "red",
                 "agent": "jett",
@@ -10357,7 +10357,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "4b7cedee-b7af-5e1e-a27e-9516f38e0f49",
+                "puuid": "4b7cedee-b7af-5e1e-a27e-9516f38e0f49",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "blue",
                 "agent": "sova",
@@ -10376,7 +10376,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "08aace12-7859-5bfc-99a8-701034a1215b",
+                "puuid": "08aace12-7859-5bfc-99a8-701034a1215b",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "blue",
                 "agent": "clove",
@@ -10395,7 +10395,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "3dbb7348-0207-5e6a-b42f-cb0ea37473db",
+                "puuid": "3dbb7348-0207-5e6a-b42f-cb0ea37473db",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "blue",
                 "agent": "raze",
@@ -10414,7 +10414,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "match_id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
                 "team": "red",
                 "agent": "phoenix",
@@ -14060,59 +14060,59 @@
         },
         "players_info": [
             {
-                "player_puuid": "cc03da8f-3e88-524d-ba09-02d67aa39c4e",
+                "puuid": "cc03da8f-3e88-524d-ba09-02d67aa39c4e",
                 "game_name": "athenaa",
                 "tag": "6854"
             },
             {
-                "player_puuid": "6bf1056b-bddb-52be-a342-3e9c5ee9dae7",
+                "puuid": "6bf1056b-bddb-52be-a342-3e9c5ee9dae7",
                 "game_name": "Kim Jennie",
                 "tag": "5562"
             },
             {
-                "player_puuid": "5bef0ae2-acef-55ef-8d7c-13977ebea251",
+                "puuid": "5bef0ae2-acef-55ef-8d7c-13977ebea251",
                 "game_name": "KenDynamite",
                 "tag": "8888"
             },
             {
-                "player_puuid": "bbe22098-8dc5-566f-b85b-70bace0e696c",
+                "puuid": "bbe22098-8dc5-566f-b85b-70bace0e696c",
                 "game_name": "cheerios",
                 "tag": "milky"
             },
             {
-                "player_puuid": "611a4dc1-82ef-5d7e-99e4-1babae060a15",
+                "puuid": "611a4dc1-82ef-5d7e-99e4-1babae060a15",
                 "game_name": "adq",
                 "tag": "yipee"
             },
             {
-                "player_puuid": "fb0a736c-7829-5f01-8115-d9d7c2de2d73",
+                "puuid": "fb0a736c-7829-5f01-8115-d9d7c2de2d73",
                 "game_name": "Puday",
                 "tag": "RATBU"
             },
             {
-                "player_puuid": "eab84cda-0bd2-5a39-9131-5af2e62375bf",
+                "puuid": "eab84cda-0bd2-5a39-9131-5af2e62375bf",
                 "game_name": "darkivist",
                 "tag": "shrim"
             },
             {
-                "player_puuid": "11a92b3f-1a73-527d-9825-5b765bf6f09a",
+                "puuid": "11a92b3f-1a73-527d-9825-5b765bf6f09a",
                 "game_name": "dennnysssss",
                 "tag": "7038"
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "game_name": "Captain Ignant",
                 "tag": "goat"
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "game_name": "kupopuffs",
                 "tag": "420"
             }
         ],
         "players_stats": [
             {
-                "player_puuid": "cc03da8f-3e88-524d-ba09-02d67aa39c4e",
+                "puuid": "cc03da8f-3e88-524d-ba09-02d67aa39c4e",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "red",
                 "agent": "jett",
@@ -14131,7 +14131,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "6bf1056b-bddb-52be-a342-3e9c5ee9dae7",
+                "puuid": "6bf1056b-bddb-52be-a342-3e9c5ee9dae7",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "blue",
                 "agent": "brimstone",
@@ -14150,7 +14150,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "5bef0ae2-acef-55ef-8d7c-13977ebea251",
+                "puuid": "5bef0ae2-acef-55ef-8d7c-13977ebea251",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "red",
                 "agent": "cypher",
@@ -14169,7 +14169,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "bbe22098-8dc5-566f-b85b-70bace0e696c",
+                "puuid": "bbe22098-8dc5-566f-b85b-70bace0e696c",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "red",
                 "agent": "clove",
@@ -14188,7 +14188,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "611a4dc1-82ef-5d7e-99e4-1babae060a15",
+                "puuid": "611a4dc1-82ef-5d7e-99e4-1babae060a15",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "red",
                 "agent": "iso",
@@ -14207,7 +14207,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "fb0a736c-7829-5f01-8115-d9d7c2de2d73",
+                "puuid": "fb0a736c-7829-5f01-8115-d9d7c2de2d73",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "red",
                 "agent": "sova",
@@ -14226,7 +14226,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "eab84cda-0bd2-5a39-9131-5af2e62375bf",
+                "puuid": "eab84cda-0bd2-5a39-9131-5af2e62375bf",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "blue",
                 "agent": "deadlock",
@@ -14245,7 +14245,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "11a92b3f-1a73-527d-9825-5b765bf6f09a",
+                "puuid": "11a92b3f-1a73-527d-9825-5b765bf6f09a",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "blue",
                 "agent": "chamber",
@@ -14264,7 +14264,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "blue",
                 "agent": "cypher",
@@ -14283,7 +14283,7 @@
                 "friendly_fire_outgoing": 0
             },
             {
-                "player_puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
+                "puuid": "c2b827e6-6836-5574-b113-d7508218b9e4",
                 "match_id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
                 "team": "blue",
                 "agent": "sage",

@@ -22,14 +22,10 @@ if __name__ == "__main__":
 
     if puuid and region:
         
-        logger.info(f"Fetched account data - PUUID: {puuid}, Region: {region}")
+        logger.info(f"Fetched account data - PUUID: {puuid}, Region: {region}.\nNow fetching Matches")
         
         # Step 2: Get Matches using the ID from Step 1
         raw_matches = get_matches_by_puuid(region, puuid)
-        
-        # Store raw matches for debugging/inspection. Remove later!
-        with open("./data/raw/raw_match.json", "w", encoding="utf-8") as f:
-            json.dump(raw_matches, f, ensure_ascii=False, indent=4)
         
         if raw_matches is None:
             logger.info("Failed to fetch matches. Exiting.")
@@ -44,7 +40,7 @@ if __name__ == "__main__":
             exit(1)
 
         # step 4: Store Parsed Data
-        with open("./data/processed/parsed_match.json", "w", encoding="utf-8") as f:
+        with open("./data/processed/parsed_matches.json", "w", encoding="utf-8") as f:
             json.dump(parsed_matches, f, ensure_ascii=False, indent=4)
         
     else:
@@ -52,6 +48,7 @@ if __name__ == "__main__":
         exit(1)
                 
     tables = normalize_tables(parsed_matches)
+    
     
     # inspecting the normalized tables
     for table_name, records in tables.items():

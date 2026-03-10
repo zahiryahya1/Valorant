@@ -104,7 +104,7 @@ def extract_match_stats(players, context):
 
         parsed_players.append({
 
-            "player_puuid": safe_get(player, "puuid"),
+            "puuid": safe_get(player, "puuid"),
             "match_id": match_id,
 
             "team": team,
@@ -162,7 +162,7 @@ def extract_player_info(player):
 
     return {
 
-        "player_puuid": safe_get(player, "puuid"),
+        "puuid": safe_get(player, "puuid"),
         "game_name": safe_get(player, "name"),
         "tag": safe_get(player, "tag"),
     }

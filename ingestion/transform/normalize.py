@@ -28,7 +28,7 @@ def normalize_tables(parsed_matches):
     unique_players = {}
 
     for player in tables["players"]:
-        unique_players[player["player_puuid"]] = player
+        unique_players[player["puuid"]] = player
 
     tables["players"] = list(unique_players.values())
 
