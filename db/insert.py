@@ -13,10 +13,10 @@ logger = logging.getLogger(__name__)
 # BULK INSERT W/ DUPLICATE PREVENTION
 # ===========================================
 
-def insert_matches(cursor, table_name, matches):
+def insert_matches(conn, matches):
     
     query = f"""
-        INSERT INTO {table_name} ( 
+        INSERT INTO matches ( 
             match_id, 
             date_played,
             map,
@@ -32,23 +32,51 @@ def insert_matches(cursor, table_name, matches):
         ON CONFLICT (match_id) DO NOTHING;
         """
 
-    rows = [
-        (
-            m["match_id"],
-            m["map"],
-            m["game_mode"],
-            m["season_id"],
-            m["season_name"],
-            m["act_id"],
-            m["act_name"],
-            m["game_start"],
-            m["game_length_sec"],
-            m["rounds_played"]
-        )
-        for m in matches
-    ]    
-    
-    execute_values(cursor, query, rows)
+    try: 
+        rows = [
+            (
+                m["match_id"],
+                m["date_played"],
+                m["map"],
+                m["game_mode"],
+                m["season_id"],
+                m["season_name"],
+                m["act_id"],
+                m["act_name"],
+                m["game_start"],
+                m["game_length_sec"],
+                m["rounds_played"]
+            )
+            for m in matches
+        ]
+        
+        if not rows:
+            logger.warning("No matches to insert")
+            return
+        
+        
+        with conn.cursor() as cursor:
+
+            execute_values(cursor, query, rows)
+
+            inserted = cursor.rowcount
+            attempted = len(rows)
+            skipped = attempted - inserted
+
+        conn.commit()
+
+        logger.info(f"Matches attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+
+    except psycopg2.Error as e:
+
+        conn.rollback()
+
+        logger.error("insert_matches failed")
+        logger.error(e)
+
+        raise
+        
+        
     
 
 def insert_players(conn, players):
@@ -74,7 +102,7 @@ def insert_players(conn, players):
         ]
 
         if not rows:
-            logger.warning("No player rows to insert")
+            logger.warning("No players to insert")
             return
 
         with conn.cursor() as cursor:
@@ -87,9 +115,7 @@ def insert_players(conn, players):
 
         conn.commit()
 
-        logger.info(f"Players attempted: {attempted}")
-        logger.info(f"Players inserted: {inserted}")
-        logger.info(f"Players skipped (duplicates): {skipped}")
+        logger.info(f"Players attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
 
     except psycopg2.Error as e:
 
@@ -102,7 +128,7 @@ def insert_players(conn, players):
     
     
     
-def insert_player_match_stats(cursor, table_name, stats):
+def insert_player_match_stats(conn, stats):
     
     query = """
     INSERT INTO player_match_stats (
@@ -119,7 +145,7 @@ def insert_player_match_stats(cursor, table_name, stats):
         score,
         damage,
         
-        headhsots,
+        headshots,
         bodyshots,
         legshots,
         
@@ -128,38 +154,62 @@ def insert_player_match_stats(cursor, table_name, stats):
         friendly_fire_outgoing
     )
     VALUES %s
-    ON CONFLICT (match_id, player_puuid) DO NOTHING
+    ON CONFLICT (match_id, puuid) DO NOTHING
     """
 
-    rows = [
-        (
-            s["match_id"],
-            s["puuid"],
-            s["team"],
-            s["agent"],
-            s["rank"],
-            s["won"],
-            s["kills"],
-            s["deaths"],
-            s["assists"],
-            s["score"],
-            s["damage"],
-            s["headhsots"],
-            s["bodyshots"],
-            s["legshots"],
-            s["afk_rounds"],
-            s["friendly_fire_incoming"],
-            s["friendly_fire_outgoing"]
-        )
-        for s in stats
-    ]
+    try:
+        rows = [
+            (
+                s["match_id"],
+                s["puuid"],
+                s["team"],
+                s["agent"],
+                s["rank"],
+                s["won"],
+                s["kills"],
+                s["deaths"],
+                s["assists"],
+                s["score"],
+                s["damage"],
+                s["headshots"],
+                s["bodyshots"],
+                s["legshots"],
+                s["afk_rounds"],
+                s["friendly_fire_incoming"],
+                s["friendly_fire_outgoing"]
+            )
+            for s in stats
+        ]
 
-    execute_values(cursor, query, rows)
+        if not rows:
+            logger.warning("No player match stats to insert")
+            return
 
-def insert_rounds(cursor, table_name, rounds):
+        with conn.cursor() as cursor:
+
+            execute_values(cursor, query, rows)
+
+            inserted = cursor.rowcount
+            attempted = len(rows)
+            skipped = attempted - inserted
+
+        conn.commit()
+
+        logger.info(f"Player match stats attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+
+    except psycopg2.Error as e:
+
+        conn.rollback()
+
+        logger.error("insert_player_match_stats failed")
+        logger.error(e)
+
+        raise
+
+def insert_rounds(conn, rounds):
     
     query = f"""
-        INSERT INTO {table_name} ( 
+        INSERT INTO rounds ( 
             match_id, 
             round_number,
             winning_team,
@@ -169,32 +219,56 @@ def insert_rounds(cursor, table_name, rounds):
         ) VALUES %s
         ON CONFLICT (match_id, round_number) DO NOTHING;
         """
+    
+    try:
+        rows = [
+            (
+                r["match_id"],
+                r["round_number"],
+                r["winning_team"],
+                r["round_end_reason"],
+                r["bomb_planted_player"],
+                r["bomb_defused_player"]
+            )
+            for r in rounds
+        ]    
+        
+        if not rows:
+            logger.warning("No rounds to insert")
+            return
 
-    rows = [
-        (
-            r["match_id"],
-            r["round_number"],
-            r["winning_team"],
-            r["round_end_reason"],
-            r["bomb_planted_player"],
-            r["bomb_defused_player"]
-        )
-        for r in rounds
-    ]    
+        with conn.cursor() as cursor:
+
+            execute_values(cursor, query, rows)
+
+            inserted = cursor.rowcount
+            attempted = len(rows)
+            skipped = attempted - inserted
+
+        conn.commit()
+
+        logger.info(f"Rounds attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+
+    except psycopg2.Error as e:
+
+        conn.rollback()
+
+        logger.error("insert_rounds failed")
+        logger.error(e)
+
+        raise
     
-    execute_values(cursor, query, rows)
     
-    
-def insert_damage_events(cursor, table_name, dmg_events):
+def insert_damage_events(conn, dmg_events):
     
     query = f"""
-        INSERT INTO {table_name} ( 
+        INSERT INTO damage_events ( 
             match_id, 
             round_number,
             attacker_puuid,
             receiver_puuid,
             damage,
-            headhsots,
+            headshots,
             bodyshots,
             legshots
         ) VALUES %s
@@ -206,31 +280,56 @@ def insert_damage_events(cursor, table_name, dmg_events):
         ) DO NOTHING
         """
 
-    rows = [
-        (
-            dmg["match_id"],
-            dmg["round_number"],
-            dmg["attacker_puuid"],
-            dmg["receiver_puuid"],
-            dmg["damage"],
-            dmg["headhsots"],
-            dmg["bodyshots"],
-            dmg["legshots"]
-        )
-        for dmg in dmg_events
-    ]    
+    try:
+        rows = [
+            (
+                dmg["match_id"],
+                dmg["round_number"],
+                dmg["attacker_puuid"],
+                dmg["receiver_puuid"],
+                dmg["damage"],
+                dmg["headshots"],
+                dmg["bodyshots"],
+                dmg["legshots"]
+            )
+            for dmg in dmg_events
+        ]
+        
+        
+        if not rows:
+            logger.warning("No damage events to insert")
+            return
+
+        with conn.cursor() as cursor:
+
+            execute_values(cursor, query, rows)
+
+            inserted = cursor.rowcount
+            attempted = len(rows)
+            skipped = attempted - inserted
+
+        conn.commit()
+
+        logger.info(f"Damage events attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+
+    except psycopg2.Error as e:
+
+        conn.rollback()
+
+        logger.error("insert_damage_events failed")
+        logger.error(e)
+
+        raise
     
-    execute_values(cursor, query, rows)
     
-    
-def insert_kill_events(cursor, table_name, kills):
+def insert_kill_events(conn, kills):
     query = f"""
-        INSERT INTO {table_name} ( 
+        INSERT INTO kill_events ( 
             match_id, 
             round_number,
+            kill_time_in_round,
             killer_puuid,
             victim_puuid,
-            damage,
             killer_team,
             victim_team,
             weapon
@@ -244,68 +343,43 @@ def insert_kill_events(cursor, table_name, kills):
         ) DO NOTHING
         """
 
-    rows = [
-        (
-            k["match_id"],
-            k["round_number"],
-            k["attacker_puuid"],
-            k["receiver_puuid"],
-            k["damage"],
-            k["headhsots"],
-            k["bodyshots"],
-            k["legshots"]
-        )
-        for k in kills
-    ]    
-    
-    execute_values(cursor, query, rows)
+    try:
+        rows = [
+            (
+                k["match_id"],
+                k["round_number"],
+                k["kill_time_in_round"],
+                k["killer_puuid"],
+                k["victim_puuid"],
+                k["killer_team"],
+                k["victim_team"],
+                k["weapon"]
+            )
+            for k in kills
+        ]    
+        
+        if not rows:
+            logger.warning("No kill events to insert")
+            return
 
+        with conn.cursor() as cursor:
 
+            execute_values(cursor, query, rows)
 
-def insert_damamge_events(engine, table_name, data):
-    if not data:
-        logger.info(f"No event data to insert into {table_name}")
-        return 0
-    
-    return 1 # number of records inserted
-    
-def insert_kill_events(engine, table_name, data):
-    if not data:
-        logger.info(f"No kill event data to insert into {table_name}")
-        return 0
-    
-    return 1 # number of records inserted
-    
-    
-def insert_session_data(engine, table_name, data):
-    if not data:
-        logger.info(f"No session data to insert into {table_name}")
-        return 0
-    
-    return 1 # number of records inserted
+            inserted = cursor.rowcount
+            attempted = len(rows)
+            skipped = attempted - inserted
 
-def insert_session_matches(engine, table_name, data):
-    if not data:
-        logger.info(f"No session match data to insert into {table_name}")
-        return 0
-    
-    return 1 # number of records inserted
+        conn.commit()
 
-    
-    
-# ===========================================
-# Queries
-# ===========================================
-# * fetch matches by season (if season is given, filter by season column for matches. if no season is given, default to current season)
-# * fetch match stats
-# * fetch rounds
-# * fetch player info and stats
-# * fetch kill events
-# * fetch damage events
+        logger.info(f"kill events attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
 
-# if no season is given, default to curent. if season is given, fetch data for that season. 
-# (filer by season column for matches)
+    except psycopg2.Error as e:
 
-def fetch_matches_by_season(engine, puuid, season):
-    
-    return pd.DataFrame()
+        conn.rollback()
+
+        logger.error("insert_kill_events failed")
+        logger.error(e)
+
+        raise
+

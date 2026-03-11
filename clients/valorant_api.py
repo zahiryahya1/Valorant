@@ -45,7 +45,7 @@ def get_matches_by_puuid(region: str, puuid: str) -> Optional[Dict[str, Any]]:
         print("[WARN] Region or PUUID not provided")
         return None
     session = get_session()
-    url = f"{BASE_URL}/v3/by-puuid/matches/{region}/{puuid}"
+    url = f"{BASE_URL}/v3/by-puuid/matches/{region}/{puuid}?size=9"
     try:
         response = session.get(url)
         response.raise_for_status()

@@ -12,4 +12,7 @@ with open("./data/raw/test_matches.json", "r") as f:
 parsed_matches = parse_matches(matches_data["data"])
 
 with open("./data/processed/test_parsed_matches.json", "w", encoding="utf-8") as f:
-    json.dump(parsed_matches, f, ensure_ascii=False, indent=4)
+    json.dump(parsed_matches, f, ensure_ascii=False, indent=4, default=str)
+    
+
+

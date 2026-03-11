@@ -1,7 +1,7 @@
 from ingestion.parser.match_parser import parse_matches
 from db.connection import get_connection
 from ingestion.transform.normalize import normalize_tables
-from db.insert import insert_players
+from db.insert import *
 from config.logging import setup_logger
 
 import json
@@ -21,3 +21,13 @@ parsed_matches = parse_matches(matches_data["data"])
 tables = normalize_tables(parsed_matches)
 
 insert_players(conn, tables["players"])
+
+insert_matches(conn, tables["matches"])
+
+insert_player_match_stats(conn, tables["player_match_stats"])
+
+insert_rounds(conn, tables["rounds"])
+
+insert_damage_events(conn, tables["damage_events"])
+
+insert_kill_events(conn, tables["kill_events"])

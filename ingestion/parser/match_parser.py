@@ -12,6 +12,8 @@
 
 from .helpers import safe_get
 
+from datetime import datetime
+
 # ==========================================================
 # MAIN MATCH PARSER
 # ==========================================================
@@ -61,19 +63,34 @@ def parse_matches(matches):
 
 def parse_metadata(metadata):
 
+    date_str = safe_get(metadata, "game_start_patched")
+    date_played = datetime.strptime(
+    date_str,
+    "%A, %B %d, %Y %I:%M %p"
+    )
+    
+    game_start = datetime.fromtimestamp(safe_get(metadata, "game_start"))
+    
+
     return {
 
         "match_id": safe_get(metadata, "matchid"),
         "map": safe_get(metadata, "map"),
         "game_mode": safe_get(metadata, "mode"),
 
-        "date_played": safe_get(metadata, "game_start_patched"),
-        "game_start": safe_get(metadata, "game_start"),
+        "date_played": date_played,
+        "game_start": game_start,
 
         "game_length_sec": int(safe_get(metadata, "game_length", default=0)),
         "rounds_played": int(safe_get(metadata, "rounds_played", default=0)),
 
         "season_id": safe_get(metadata, "season_id"),
+        
+        # need to get season and act names by calling valorant api
+        "season_name": None,
+        "act_id": None,
+        "act_name": None,
+        
         "version": safe_get(metadata, "game_version"),
     }
 
@@ -245,7 +262,7 @@ def extract_damage_events(round_data, match_id, round_number):
                 "damage": int(safe_get(dmg, "damage", default=0)),
                 "headshots": int(safe_get(dmg, "headshots", default=0)),
                 "bodyshots": int(safe_get(dmg, "bodyshots", default=0)),
-                "legshot": int(safe_get(dmg, "legshots", default=0)),
+                "legshots": int(safe_get(dmg, "legshots", default=0)),
             })
         
     return events

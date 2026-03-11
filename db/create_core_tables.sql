@@ -44,7 +44,7 @@ CREATE TABLE player_match_stats (
     puuid TEXT,
     team TEXT,
     agent TEXT,
-    rank INT,
+    rank TEXT,
     won BOOLEAN,
 
     kills INT,
@@ -61,9 +61,9 @@ CREATE TABLE player_match_stats (
     friendly_fire_incoming INT,
     friendly_fire_outgoing INT,
 
-    PRIMARY KEY (match_id, player_puuid),
+    PRIMARY KEY (match_id, puuid),
     FOREIGN KEY (match_id) REFERENCES matches(match_id),
-    FOREIGN KEY (player_puuid) REFERENCES players(player_puuid)
+    FOREIGN KEY (puuid) REFERENCES players(puuid)
 );
 
 
@@ -149,7 +149,7 @@ CREATE TABLE damage_events (
 
 CREATE TABLE sessions (
     session_id SERIAL PRIMARY KEY,
-    player_puuid TEXT,
+    puuid TEXT,
 
     start_time TIMESTAMP,
     end_time TIMESTAMP,
