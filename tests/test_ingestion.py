@@ -1,18 +1,28 @@
-from ingestion.parser.match_parser import parse_matches
+from ingestion.parser.match_parser import parse_matches, parse_stored_data
+from clients.valorant_api import get_match_by_id
 
 import json
 
 test_puuid = "f9f26d15-776c-57a0-b6bf-be1fc1d3c443"
 
-with open("./data/raw/test_matches.json", "r") as f:
-    matches_data = json.load(f)
+with open("./data/raw/test_stored_matches.json", "r") as f:
+    stored_matches = json.load(f)
 
-# each game in the list of matches is a dictionary with keys "metadata", "players", and "rounds".
+match_ids = parse_stored_data(stored_matches["data"])
 
-parsed_matches = parse_matches(matches_data["data"])
+matches = []
 
-with open("./data/processed/test_parsed_matches.json", "w", encoding="utf-8") as f:
-    json.dump(parsed_matches, f, ensure_ascii=False, indent=4, default=str)
+
+# because I am fetching a bunch of match data, I will need to have a wait time. 
+for id in match_ids:
+    print(id)
+    matches.append(get_match_by_id(id))
+    
+print(matches)
+exit()
+
+with open("./data/processed/test_parsed_stored_matches.json", "w", encoding="utf-8") as f:
+    json.dump(match_ids, f, ensure_ascii=False, indent=4, default=str)
     
 
 

@@ -1,0 +1,1844 @@
+{
+    "status": 200,
+    "results": {
+        "total": 39,
+        "returned": 39,
+        "before": -100,
+        "after": 39
+    },
+    "data": [
+        {
+            "meta": {
+                "id": "bf0c46ee-6383-4bcb-9ee2-d49672e36de1",
+                "map": {
+                    "id": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+                    "name": "Haven"
+                },
+                "version": "release-12.04-shipping-24-4354757",
+                "mode": "Competitive",
+                "started_at": "2026-03-10T05:33:43.167Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Blue",
+                "level": 240,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 12,
+                "score": 4991,
+                "kills": 18,
+                "deaths": 12,
+                "assists": 7,
+                "shots": {
+                    "head": 10,
+                    "body": 42,
+                    "leg": 6
+                },
+                "damage": {
+                    "made": 3033,
+                    "received": 2523
+                }
+            },
+            "teams": {
+                "red": 7,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "55b21d58-c613-4b23-a8e9-1b5219f889c7",
+                "map": {
+                    "id": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+                    "name": "Breeze"
+                },
+                "version": "release-12.04-shipping-24-4354757",
+                "mode": "Competitive",
+                "started_at": "2026-03-08T23:42:25.371Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Blue",
+                "level": 240,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 12,
+                "score": 4535,
+                "kills": 17,
+                "deaths": 15,
+                "assists": 3,
+                "shots": {
+                    "head": 7,
+                    "body": 48,
+                    "leg": 6
+                },
+                "damage": {
+                    "made": 2993,
+                    "received": 3120
+                }
+            },
+            "teams": {
+                "red": 11,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "43967c7f-04eb-4d9f-a379-26ad1370f2be",
+                "map": {
+                    "id": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+                    "name": "Abyss"
+                },
+                "version": "release-12.04-shipping-24-4354757",
+                "mode": "Competitive",
+                "started_at": "2026-03-07T04:19:15.023Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (Oregon)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Red",
+                "level": 240,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 12,
+                "score": 4621,
+                "kills": 17,
+                "deaths": 17,
+                "assists": 3,
+                "shots": {
+                    "head": 5,
+                    "body": 50,
+                    "leg": 4
+                },
+                "damage": {
+                    "made": 2780,
+                    "received": 3513
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 7
+            }
+        },
+        {
+            "meta": {
+                "id": "d262b3f2-6157-4eaa-84d7-a3c0297ba329",
+                "map": {
+                    "id": "a264de0f-4a04-9c78-c97a-a6b192ce6e86",
+                    "name": "Skirmish C"
+                },
+                "version": "release-12.04-shipping-24-4354757",
+                "mode": "Custom Game",
+                "started_at": "2026-03-07T04:10:46.155Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Red",
+                "level": 240,
+                "character": {
+                    "id": "b444168c-4e35-8076-db47-ef9bf368f384",
+                    "name": "Tejo"
+                },
+                "tier": 0,
+                "score": 2770,
+                "kills": 9,
+                "deaths": 12,
+                "assists": 2,
+                "shots": {
+                    "head": 0,
+                    "body": 0,
+                    "leg": 0
+                },
+                "damage": {
+                    "made": 0,
+                    "received": 0
+                }
+            },
+            "teams": {
+                "red": 9,
+                "blue": 10
+            }
+        },
+        {
+            "meta": {
+                "id": "9ad1bb4b-e17a-4dd1-9489-ae11b4ed1fa6",
+                "map": {
+                    "id": "fd267378-4d1d-484f-ff52-77821ed10dc2",
+                    "name": "Pearl"
+                },
+                "version": "release-12.00-shipping-30-4183428",
+                "mode": "Competitive",
+                "started_at": "2026-01-20T01:39:15.333Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Red",
+                "level": 240,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 0,
+                "score": 1896,
+                "kills": 5,
+                "deaths": 15,
+                "assists": 6,
+                "shots": {
+                    "head": 3,
+                    "body": 20,
+                    "leg": 9
+                },
+                "damage": {
+                    "made": 1162,
+                    "received": 3100
+                }
+            },
+            "teams": {
+                "red": 4,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "c07279a9-7837-4de6-96d0-9dc6efc622d0",
+                "map": {
+                    "id": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+                    "name": "Bind"
+                },
+                "version": "release-12.00-shipping-30-4183428",
+                "mode": "Competitive",
+                "started_at": "2026-01-18T22:06:17.515Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Blue",
+                "level": 239,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 0,
+                "score": 3668,
+                "kills": 13,
+                "deaths": 17,
+                "assists": 3,
+                "shots": {
+                    "head": 2,
+                    "body": 44,
+                    "leg": 3
+                },
+                "damage": {
+                    "made": 2150,
+                    "received": 3031
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 7
+            }
+        },
+        {
+            "meta": {
+                "id": "051d13b2-c2a3-4d7a-b29d-43ace3fe2329",
+                "map": {
+                    "id": "e2ad5c54-4114-a870-9641-8ea21279579a",
+                    "name": "Icebox"
+                },
+                "version": "release-12.00-shipping-30-4183428",
+                "mode": "Swiftplay",
+                "started_at": "2026-01-18T21:47:38.613Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (Oregon)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Red",
+                "level": 239,
+                "character": {
+                    "id": "f94c3b30-42be-e959-889c-5aa313dba261",
+                    "name": "Raze"
+                },
+                "tier": 0,
+                "score": 3207,
+                "kills": 11,
+                "deaths": 7,
+                "assists": 3,
+                "shots": {
+                    "head": 5,
+                    "body": 30,
+                    "leg": 2
+                },
+                "damage": {
+                    "made": 1843,
+                    "received": 1296
+                }
+            },
+            "teams": {
+                "red": 5,
+                "blue": 4
+            }
+        },
+        {
+            "meta": {
+                "id": "f5b92e77-1d03-4b31-a6bb-b1592184dd67",
+                "map": {
+                    "id": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+                    "name": "Haven"
+                },
+                "version": "release-12.00-shipping-29-4132275",
+                "mode": "Swiftplay",
+                "started_at": "2026-01-14T06:12:33.472Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Red",
+                "level": 239,
+                "character": {
+                    "id": "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+                    "name": "Sova"
+                },
+                "tier": 0,
+                "score": 2420,
+                "kills": 8,
+                "deaths": 5,
+                "assists": 2,
+                "shots": {
+                    "head": 4,
+                    "body": 19,
+                    "leg": 5
+                },
+                "damage": {
+                    "made": 1587,
+                    "received": 969
+                }
+            },
+            "teams": {
+                "red": 5,
+                "blue": 3
+            }
+        },
+        {
+            "meta": {
+                "id": "279aac5d-6053-451e-92a7-dc49eda9733f",
+                "map": {
+                    "id": "1c18ab1f-420d-0d8b-71d0-77ad3c439115",
+                    "name": "Corrode"
+                },
+                "version": "release-12.00-shipping-29-4132275",
+                "mode": "All Random One Site",
+                "started_at": "2026-01-14T06:00:18.386Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 239,
+                "character": {
+                    "id": "dade69b4-4f5a-8528-247b-219e5a1facd6",
+                    "name": "Fade"
+                },
+                "tier": 0,
+                "score": 2100,
+                "kills": 8,
+                "deaths": 5,
+                "assists": 3,
+                "shots": {
+                    "head": 4,
+                    "body": 25,
+                    "leg": 2
+                },
+                "damage": {
+                    "made": 1472,
+                    "received": 795
+                }
+            },
+            "teams": {
+                "red": 5,
+                "blue": 2
+            }
+        },
+        {
+            "meta": {
+                "id": "f45d01d8-0275-43c1-ba80-65acb635da00",
+                "map": {
+                    "id": "d960549e-485c-e861-8d71-aa9d1aed12a2",
+                    "name": "Split"
+                },
+                "version": "release-12.00-shipping-29-4132275",
+                "mode": "Competitive",
+                "started_at": "2026-01-11T00:36:59.842Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Blue",
+                "level": 239,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 0,
+                "score": 4819,
+                "kills": 17,
+                "deaths": 15,
+                "assists": 9,
+                "shots": {
+                    "head": 9,
+                    "body": 44,
+                    "leg": 18
+                },
+                "damage": {
+                    "made": 3319,
+                    "received": 2548
+                }
+            },
+            "teams": {
+                "red": 8,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "2d7cd07b-8c92-4a92-83fe-cf4816f18edb",
+                "map": {
+                    "id": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+                    "name": "Breeze"
+                },
+                "version": "release-12.00-shipping-29-4132275",
+                "mode": "Competitive",
+                "started_at": "2026-01-11T00:04:54.1Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Blue",
+                "level": 239,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 0,
+                "score": 4453,
+                "kills": 17,
+                "deaths": 9,
+                "assists": 4,
+                "shots": {
+                    "head": 11,
+                    "body": 28,
+                    "leg": 6
+                },
+                "damage": {
+                    "made": 2813,
+                    "received": 2477
+                }
+            },
+            "teams": {
+                "red": 5,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "015a9824-ee1a-4abf-b106-4b4437c1ec8e",
+                "map": {
+                    "id": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+                    "name": "Breeze"
+                },
+                "version": "release-12.00-shipping-29-4132275",
+                "mode": "Competitive",
+                "started_at": "2026-01-10T03:46:22.244Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Red",
+                "level": 239,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 0,
+                "score": 3709,
+                "kills": 11,
+                "deaths": 16,
+                "assists": 8,
+                "shots": {
+                    "head": 5,
+                    "body": 49,
+                    "leg": 4
+                },
+                "damage": {
+                    "made": 2591,
+                    "received": 3303
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 9
+            }
+        },
+        {
+            "meta": {
+                "id": "58477bf2-0556-443a-bbe6-5e317b51cd3a",
+                "map": {
+                    "id": "1c18ab1f-420d-0d8b-71d0-77ad3c439115",
+                    "name": "Corrode"
+                },
+                "version": "release-12.00-shipping-29-4132275",
+                "mode": "Swiftplay",
+                "started_at": "2026-01-09T00:09:46.14Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Blue",
+                "level": 239,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 0,
+                "score": 1142,
+                "kills": 4,
+                "deaths": 7,
+                "assists": 2,
+                "shots": {
+                    "head": 2,
+                    "body": 11,
+                    "leg": 0
+                },
+                "damage": {
+                    "made": 737,
+                    "received": 1361
+                }
+            },
+            "teams": {
+                "red": 5,
+                "blue": 4
+            }
+        },
+        {
+            "meta": {
+                "id": "757e2c9d-a045-47ff-85a5-ab71cf9fea71",
+                "map": {
+                    "id": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+                    "name": "Abyss"
+                },
+                "version": "release-12.00-shipping-29-4132275",
+                "mode": "All Random One Site",
+                "started_at": "2026-01-08T23:54:19.058Z",
+                "season": {
+                    "id": "3ea2b318-423b-cf86-25da-7cbb0eefbe2d",
+                    "short": "e11a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": "Captain Ignant",
+                "tag": "goat",
+                "team": "Red",
+                "level": 238,
+                "character": {
+                    "id": "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+                    "name": "Astra"
+                },
+                "tier": 0,
+                "score": 1571,
+                "kills": 4,
+                "deaths": 5,
+                "assists": 6,
+                "shots": {
+                    "head": 1,
+                    "body": 19,
+                    "leg": 7
+                },
+                "damage": {
+                    "made": 1113,
+                    "received": 1252
+                }
+            },
+            "teams": {
+                "red": 5,
+                "blue": 3
+            }
+        },
+        {
+            "meta": {
+                "id": "2f6e59bf-5cff-4521-a593-4d205960ed00",
+                "map": {
+                    "id": "1c18ab1f-420d-0d8b-71d0-77ad3c439115",
+                    "name": "Corrode"
+                },
+                "version": "release-11.11-shipping-10-4091853",
+                "mode": "Competitive",
+                "started_at": "2025-12-17T23:19:31.007Z",
+                "season": {
+                    "id": "4c4b8cff-43eb-13d3-8f14-96b783c90cd2",
+                    "short": "e10a6"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 238,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 14,
+                "score": 4684,
+                "kills": 12,
+                "deaths": 18,
+                "assists": 13,
+                "shots": {
+                    "head": 8,
+                    "body": 69,
+                    "leg": 15
+                },
+                "damage": {
+                    "made": 3435,
+                    "received": 3239
+                }
+            },
+            "teams": {
+                "red": 11,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "f33f2ec8-d1e3-4897-9099-2acced88486b",
+                "map": {
+                    "id": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+                    "name": "Haven"
+                },
+                "version": "release-11.07-shipping-13-3855133",
+                "mode": "Competitive",
+                "started_at": "2025-10-10T14:57:18.662Z",
+                "season": {
+                    "id": "5adc33fa-4f30-2899-f131-6fba64c5dd3a",
+                    "short": "e10a5"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 236,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 14,
+                "score": 1151,
+                "kills": 4,
+                "deaths": 7,
+                "assists": 0,
+                "shots": {
+                    "head": 1,
+                    "body": 18,
+                    "leg": 2
+                },
+                "damage": {
+                    "made": 746,
+                    "received": 1302
+                }
+            },
+            "teams": {
+                "red": 7,
+                "blue": 0
+            }
+        },
+        {
+            "meta": {
+                "id": "1105b277-8460-4a32-acd1-158616b05185",
+                "map": {
+                    "id": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9",
+                    "name": "Lotus"
+                },
+                "version": "release-11.06-shipping-9-3836880",
+                "mode": "Competitive",
+                "started_at": "2025-09-23T23:01:40.81Z",
+                "season": {
+                    "id": "5adc33fa-4f30-2899-f131-6fba64c5dd3a",
+                    "short": "e10a5"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 229,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 13,
+                "score": 3351,
+                "kills": 11,
+                "deaths": 16,
+                "assists": 7,
+                "shots": {
+                    "head": 7,
+                    "body": 27,
+                    "leg": 11
+                },
+                "damage": {
+                    "made": 2194,
+                    "received": 3005
+                }
+            },
+            "teams": {
+                "red": 11,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "cabc49e1-3cf6-4362-b219-dd93a933f48e",
+                "map": {
+                    "id": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+                    "name": "Bind"
+                },
+                "version": "release-11.06-shipping-9-3836880",
+                "mode": "Competitive",
+                "started_at": "2025-09-23T14:45:33.68Z",
+                "season": {
+                    "id": "5adc33fa-4f30-2899-f131-6fba64c5dd3a",
+                    "short": "e10a5"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 228,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 13,
+                "score": 3398,
+                "kills": 9,
+                "deaths": 12,
+                "assists": 8,
+                "shots": {
+                    "head": 7,
+                    "body": 44,
+                    "leg": 7
+                },
+                "damage": {
+                    "made": 2666,
+                    "received": 2150
+                }
+            },
+            "teams": {
+                "red": 8,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "6e3a6d8e-45ca-4bd9-999a-ab3f9e40963c",
+                "map": {
+                    "id": "92584fbe-486a-b1b2-9faa-39b0f486b498",
+                    "name": "Sunset"
+                },
+                "version": "release-11.05-shipping-10-3752521",
+                "mode": "Competitive",
+                "started_at": "2025-09-14T18:21:19.405Z",
+                "season": {
+                    "id": "5adc33fa-4f30-2899-f131-6fba64c5dd3a",
+                    "short": "e10a5"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 227,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 12,
+                "score": 4713,
+                "kills": 16,
+                "deaths": 18,
+                "assists": 6,
+                "shots": {
+                    "head": 4,
+                    "body": 72,
+                    "leg": 8
+                },
+                "damage": {
+                    "made": 2898,
+                    "received": 3088
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 9
+            }
+        },
+        {
+            "meta": {
+                "id": "18cd621d-ef2c-4cee-8782-ce0d476afb86",
+                "map": {
+                    "id": "92584fbe-486a-b1b2-9faa-39b0f486b498",
+                    "name": "Sunset"
+                },
+                "version": "release-11.04-shipping-21-3747470",
+                "mode": "Competitive",
+                "started_at": "2025-08-29T17:51:53.205Z",
+                "season": {
+                    "id": "5adc33fa-4f30-2899-f131-6fba64c5dd3a",
+                    "short": "e10a5"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 221,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 10,
+                "score": 2154,
+                "kills": 7,
+                "deaths": 19,
+                "assists": 4,
+                "shots": {
+                    "head": 4,
+                    "body": 31,
+                    "leg": 3
+                },
+                "damage": {
+                    "made": 1614,
+                    "received": 3567
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 11
+            }
+        },
+        {
+            "meta": {
+                "id": "2e21ab0d-6198-469f-ad60-9deceec22873",
+                "map": {
+                    "id": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+                    "name": "Abyss"
+                },
+                "version": "release-09.01-shipping-21-2669223",
+                "mode": "Unrated",
+                "started_at": "2024-07-24T21:59:45.279Z",
+                "season": {
+                    "id": "52ca6698-41c1-e7de-4008-8994d2221209",
+                    "short": "e9a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 218,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 0,
+                "score": 3966,
+                "kills": 13,
+                "deaths": 13,
+                "assists": 6,
+                "shots": {
+                    "head": 9,
+                    "body": 49,
+                    "leg": 0
+                },
+                "damage": {
+                    "made": 2868,
+                    "received": 2970
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 8
+            }
+        },
+        {
+            "meta": {
+                "id": "2af51a63-a1a3-4930-b4f1-17ef1fd0038f",
+                "map": {
+                    "id": "b529448b-4d60-346e-e89e-00a4c527a405",
+                    "name": "Fracture"
+                },
+                "version": "release-09.00-shipping-28-2628993",
+                "mode": "Unrated",
+                "started_at": "2024-07-04T05:44:27.488Z",
+                "season": {
+                    "id": "52ca6698-41c1-e7de-4008-8994d2221209",
+                    "short": "e9a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 217,
+                "character": {
+                    "id": "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
+                    "name": "Reyna"
+                },
+                "tier": 0,
+                "score": 3817,
+                "kills": 13,
+                "deaths": 10,
+                "assists": 6,
+                "shots": {
+                    "head": 11,
+                    "body": 29,
+                    "leg": 5
+                },
+                "damage": {
+                    "made": 2672,
+                    "received": 1787
+                }
+            },
+            "teams": {
+                "red": 6,
+                "blue": 9
+            }
+        },
+        {
+            "meta": {
+                "id": "e4b9f724-a56b-4797-ba19-dafe903fdf53",
+                "map": {
+                    "id": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+                    "name": "Bind"
+                },
+                "version": "release-09.00-shipping-28-2628993",
+                "mode": "Competitive",
+                "started_at": "2024-06-30T20:20:27.615Z",
+                "season": {
+                    "id": "52ca6698-41c1-e7de-4008-8994d2221209",
+                    "short": "e9a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 217,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 13,
+                "score": 4726,
+                "kills": 17,
+                "deaths": 13,
+                "assists": 2,
+                "shots": {
+                    "head": 13,
+                    "body": 42,
+                    "leg": 1
+                },
+                "damage": {
+                    "made": 3239,
+                    "received": 2710
+                }
+            },
+            "teams": {
+                "red": 6,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "130c9eaa-e35d-4127-9f05-edbb6b7c5199",
+                "map": {
+                    "id": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+                    "name": "Breeze"
+                },
+                "version": "release-08.01-shipping-4-2228372",
+                "mode": "Competitive",
+                "started_at": "2024-01-24T03:23:09.333Z",
+                "season": {
+                    "id": "ec876e6c-43e8-fa63-ffc1-2e8d4db25525",
+                    "short": "e8a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 209,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 0,
+                "score": 1988,
+                "kills": 5,
+                "deaths": 14,
+                "assists": 1,
+                "shots": {
+                    "head": 4,
+                    "body": 32,
+                    "leg": 2
+                },
+                "damage": {
+                    "made": 1640,
+                    "received": 2533
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 4
+            }
+        },
+        {
+            "meta": {
+                "id": "f3507838-afb7-4171-b141-d72373e52285",
+                "map": {
+                    "id": "92584fbe-486a-b1b2-9faa-39b0f486b498",
+                    "name": "Sunset"
+                },
+                "version": "release-08.00-shipping-14-2191955",
+                "mode": "Competitive",
+                "started_at": "2024-01-21T22:32:03.602Z",
+                "season": {
+                    "id": "ec876e6c-43e8-fa63-ffc1-2e8d4db25525",
+                    "short": "e8a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 209,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 0,
+                "score": 6656,
+                "kills": 22,
+                "deaths": 19,
+                "assists": 4,
+                "shots": {
+                    "head": 10,
+                    "body": 66,
+                    "leg": 5
+                },
+                "damage": {
+                    "made": 4208,
+                    "received": 4025
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 11
+            }
+        },
+        {
+            "meta": {
+                "id": "b1fa9957-6627-4ae7-93d9-e14872a9414c",
+                "map": {
+                    "id": "2fe4ed3a-450a-948b-6d6b-e89a78e680a9",
+                    "name": "Lotus"
+                },
+                "version": "release-08.00-shipping-14-2191955",
+                "mode": "Spike Rush",
+                "started_at": "2024-01-21T22:23:14.115Z",
+                "season": {
+                    "id": "ec876e6c-43e8-fa63-ffc1-2e8d4db25525",
+                    "short": "e8a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 209,
+                "character": {
+                    "id": "f94c3b30-42be-e959-889c-5aa313dba261",
+                    "name": "Raze"
+                },
+                "tier": 0,
+                "score": 2108,
+                "kills": 7,
+                "deaths": 2,
+                "assists": 0,
+                "shots": {
+                    "head": 5,
+                    "body": 24,
+                    "leg": 0
+                },
+                "damage": {
+                    "made": 1886,
+                    "received": 325
+                }
+            },
+            "teams": {
+                "red": 4,
+                "blue": 1
+            }
+        },
+        {
+            "meta": {
+                "id": "123514e7-df8c-481b-affe-5cd2319e8d1c",
+                "map": {
+                    "id": "fd267378-4d1d-484f-ff52-77821ed10dc2",
+                    "name": "Pearl"
+                },
+                "version": "release-07.00-shipping-29-913116",
+                "mode": "Competitive",
+                "started_at": "2023-07-11T04:45:37.755Z",
+                "season": {
+                    "id": "0981a882-4e7d-371a-70c4-c3b4f46c504a",
+                    "short": "e7a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 205,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 17,
+                "score": 4174,
+                "kills": 16,
+                "deaths": 11,
+                "assists": 5,
+                "shots": {
+                    "head": 12,
+                    "body": 38,
+                    "leg": 5
+                },
+                "damage": {
+                    "made": 2723,
+                    "received": 2225
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 8
+            }
+        },
+        {
+            "meta": {
+                "id": "54da10c7-2372-41e0-9180-69c231cd2655",
+                "map": {
+                    "id": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+                    "name": "Ascent"
+                },
+                "version": "release-07.00-shipping-29-913116",
+                "mode": "Competitive",
+                "started_at": "2023-07-07T00:09:57.779Z",
+                "season": {
+                    "id": "0981a882-4e7d-371a-70c4-c3b4f46c504a",
+                    "short": "e7a1"
+                },
+                "region": "na",
+                "cluster": "US West (Oregon)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 202,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 17,
+                "score": 5190,
+                "kills": 18,
+                "deaths": 12,
+                "assists": 6,
+                "shots": {
+                    "head": 12,
+                    "body": 62,
+                    "leg": 7
+                },
+                "damage": {
+                    "made": 3696,
+                    "received": 2458
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 9
+            }
+        },
+        {
+            "meta": {
+                "id": "364167af-1b95-4373-a32b-1e70b0a0a7e3",
+                "map": {
+                    "id": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+                    "name": "Bind"
+                },
+                "version": "release-07.00-shipping-29-913116",
+                "mode": "Competitive",
+                "started_at": "2023-07-05T17:37:18.346Z",
+                "season": {
+                    "id": "0981a882-4e7d-371a-70c4-c3b4f46c504a",
+                    "short": "e7a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 201,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 16,
+                "score": 3360,
+                "kills": 12,
+                "deaths": 16,
+                "assists": 3,
+                "shots": {
+                    "head": 11,
+                    "body": 22,
+                    "leg": 3
+                },
+                "damage": {
+                    "made": 2441,
+                    "received": 2943
+                }
+            },
+            "teams": {
+                "red": 9,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "d10a7a22-718d-4e12-9bcf-cda88de89ea4",
+                "map": {
+                    "id": "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+                    "name": "Bind"
+                },
+                "version": "release-07.00-shipping-28-909577",
+                "mode": "Competitive",
+                "started_at": "2023-06-29T22:10:06.644Z",
+                "season": {
+                    "id": "0981a882-4e7d-371a-70c4-c3b4f46c504a",
+                    "short": "e7a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 199,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 15,
+                "score": 1402,
+                "kills": 3,
+                "deaths": 13,
+                "assists": 1,
+                "shots": {
+                    "head": 2,
+                    "body": 21,
+                    "leg": 5
+                },
+                "damage": {
+                    "made": 1034,
+                    "received": 2216
+                }
+            },
+            "teams": {
+                "red": 1,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "7f592799-2667-4741-a13d-cb17db71edb7",
+                "map": {
+                    "id": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+                    "name": "Ascent"
+                },
+                "version": "release-07.00-shipping-28-909577",
+                "mode": "Competitive",
+                "started_at": "2023-06-28T17:55:51.889Z",
+                "season": {
+                    "id": "0981a882-4e7d-371a-70c4-c3b4f46c504a",
+                    "short": "e7a1"
+                },
+                "region": "na",
+                "cluster": "US West (Oregon)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 199,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 14,
+                "score": 4409,
+                "kills": 15,
+                "deaths": 9,
+                "assists": 12,
+                "shots": {
+                    "head": 7,
+                    "body": 50,
+                    "leg": 7
+                },
+                "damage": {
+                    "made": 2955,
+                    "received": 1890
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 5
+            }
+        },
+        {
+            "meta": {
+                "id": "eab759d8-c56c-4c81-badd-6782311a95f7",
+                "map": {
+                    "id": "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+                    "name": "Haven"
+                },
+                "version": "release-06.11-shipping-12-900116",
+                "mode": "Competitive",
+                "started_at": "2023-06-26T21:45:33.827Z",
+                "season": {
+                    "id": "2de5423b-4aad-02ad-8d9b-c0a931958861",
+                    "short": "e6a3"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 197,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 19,
+                "score": 4420,
+                "kills": 15,
+                "deaths": 16,
+                "assists": 4,
+                "shots": {
+                    "head": 9,
+                    "body": 51,
+                    "leg": 10
+                },
+                "damage": {
+                    "made": 3031,
+                    "received": 3233
+                }
+            },
+            "teams": {
+                "red": 7,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "c911ff36-b2eb-4146-88d3-5d80fd010d98",
+                "map": {
+                    "id": "fd267378-4d1d-484f-ff52-77821ed10dc2",
+                    "name": "Pearl"
+                },
+                "version": "release-06.11-shipping-12-900116",
+                "mode": "Competitive",
+                "started_at": "2023-06-13T01:37:05.303Z",
+                "season": {
+                    "id": "2de5423b-4aad-02ad-8d9b-c0a931958861",
+                    "short": "e6a3"
+                },
+                "region": "na",
+                "cluster": "US West (Oregon)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 192,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 18,
+                "score": 2508,
+                "kills": 7,
+                "deaths": 16,
+                "assists": 7,
+                "shots": {
+                    "head": 5,
+                    "body": 32,
+                    "leg": 16
+                },
+                "damage": {
+                    "made": 1809,
+                    "received": 3150
+                }
+            },
+            "teams": {
+                "red": 11,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "7aa1e700-b961-4a68-98d9-7f632c5287d2",
+                "map": {
+                    "id": "b529448b-4d60-346e-e89e-00a4c527a405",
+                    "name": "Fracture"
+                },
+                "version": "release-06.11-shipping-10-893942",
+                "mode": "Competitive",
+                "started_at": "2023-06-11T17:18:03.155Z",
+                "season": {
+                    "id": "2de5423b-4aad-02ad-8d9b-c0a931958861",
+                    "short": "e6a3"
+                },
+                "region": "na",
+                "cluster": "US West (Oregon)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 191,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 17,
+                "score": 3623,
+                "kills": 11,
+                "deaths": 12,
+                "assists": 9,
+                "shots": {
+                    "head": 8,
+                    "body": 47,
+                    "leg": 10
+                },
+                "damage": {
+                    "made": 2860,
+                    "received": 2517
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 7
+            }
+        },
+        {
+            "meta": {
+                "id": "ad904ddf-0fd3-45a1-bd11-863e76f2621d",
+                "map": {
+                    "id": "d960549e-485c-e861-8d71-aa9d1aed12a2",
+                    "name": "Split"
+                },
+                "version": "release-06.11-shipping-10-893942",
+                "mode": "Competitive",
+                "started_at": "2023-06-07T23:06:53.571Z",
+                "season": {
+                    "id": "2de5423b-4aad-02ad-8d9b-c0a931958861",
+                    "short": "e6a3"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 191,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 17,
+                "score": 4536,
+                "kills": 15,
+                "deaths": 19,
+                "assists": 7,
+                "shots": {
+                    "head": 9,
+                    "body": 44,
+                    "leg": 11
+                },
+                "damage": {
+                    "made": 2890,
+                    "received": 3165
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 8
+            }
+        },
+        {
+            "meta": {
+                "id": "c20de5bd-7942-4410-a31a-95554e07bcff",
+                "map": {
+                    "id": "e2ad5c54-4114-a870-9641-8ea21279579a",
+                    "name": "Icebox"
+                },
+                "version": "release-06.04-shipping-13-837750",
+                "mode": "Competitive",
+                "started_at": "2023-03-11T07:14:08.67Z",
+                "season": {
+                    "id": "34093c29-4306-43de-452f-3f944bde22be",
+                    "short": "e6a2"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 180,
+                "character": {
+                    "id": "eb93336a-449b-9c1b-0a54-a891f7921d69",
+                    "name": "Phoenix"
+                },
+                "tier": 0,
+                "score": 5534,
+                "kills": 19,
+                "deaths": 17,
+                "assists": 5,
+                "shots": {
+                    "head": 6,
+                    "body": 63,
+                    "leg": 13
+                },
+                "damage": {
+                    "made": 3289,
+                    "received": 4029
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 10
+            }
+        },
+        {
+            "meta": {
+                "id": "06f50adb-fd67-4afd-9f9f-4413bd2530d0",
+                "map": {
+                    "id": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+                    "name": "Ascent"
+                },
+                "version": "release-05.01-shipping-12-732296",
+                "mode": "Competitive",
+                "started_at": "2022-08-04T03:58:39.322Z",
+                "season": {
+                    "id": "67e373c7-48f7-b422-641b-079ace30b427",
+                    "short": "e5a1"
+                },
+                "region": "na",
+                "cluster": "US West (N. California)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Red",
+                "level": 172,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 19,
+                "score": 4677,
+                "kills": 16,
+                "deaths": 18,
+                "assists": 5,
+                "shots": {
+                    "head": 6,
+                    "body": 56,
+                    "leg": 18
+                },
+                "damage": {
+                    "made": 3047,
+                    "received": 3027
+                }
+            },
+            "teams": {
+                "red": 10,
+                "blue": 13
+            }
+        },
+        {
+            "meta": {
+                "id": "745f13f1-e8d6-49fe-821a-e2cd140e56ec",
+                "map": {
+                    "id": "b529448b-4d60-346e-e89e-00a4c527a405",
+                    "name": "Fracture"
+                },
+                "version": "release-04.10-shipping-5-714978",
+                "mode": "Competitive",
+                "started_at": "2022-05-28T03:51:36.008Z",
+                "season": {
+                    "id": "3e47230a-463c-a301-eb7d-67bb60357d4f",
+                    "short": "e4a3"
+                },
+                "region": "na",
+                "cluster": "US West (N. California 1)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 147,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 14,
+                "score": 3728,
+                "kills": 12,
+                "deaths": 16,
+                "assists": 1,
+                "shots": {
+                    "head": 2,
+                    "body": 68,
+                    "leg": 22
+                },
+                "damage": {
+                    "made": 2299,
+                    "received": 2946
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 6
+            }
+        },
+        {
+            "meta": {
+                "id": "9e1dadc3-184c-4f25-b8d1-0f7f53f32ed7",
+                "map": {
+                    "id": "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+                    "name": "Ascent"
+                },
+                "version": "release-04.09-shipping-3-708238",
+                "mode": "Competitive",
+                "started_at": "2022-05-12T04:34:36.081Z",
+                "season": {
+                    "id": "3e47230a-463c-a301-eb7d-67bb60357d4f",
+                    "short": "e4a3"
+                },
+                "region": "na",
+                "cluster": "US West (N. California 1)"
+            },
+            "stats": {
+                "puuid": "f9f26d15-776c-57a0-b6bf-be1fc1d3c443",
+                "name": null,
+                "tag": null,
+                "team": "Blue",
+                "level": 144,
+                "character": {
+                    "id": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+                    "name": "Cypher"
+                },
+                "tier": 14,
+                "score": 4337,
+                "kills": 15,
+                "deaths": 17,
+                "assists": 5,
+                "shots": {
+                    "head": 9,
+                    "body": 51,
+                    "leg": 7
+                },
+                "damage": {
+                    "made": 2976,
+                    "received": 3398
+                }
+            },
+            "teams": {
+                "red": 13,
+                "blue": 10
+            }
+        }
+    ]
+}

@@ -5,8 +5,13 @@ Project goal: to create a seasonal recap of your valorant performance similar to
 Developer Notes:
 
 unofficial valorant api[https://github.com/Henrik-3/unofficial-valorant-api]
+
 HendrickDev[https://docs.henrikdev.xyz/valorant/changes/v4.6.0]
+- has a rate limit of 30 calls per second
+
 API and Schema[https://app.swaggerhub.com/apis-docs/Henrik-3/HenrikDev-API/4.2.1]
+
 api wrapper[https://raimannma.github.io/ValorantAPI/_source_files/valo_api.endpoints.html]
+
 
 

@@ -11,12 +11,14 @@
 # ==========================================================
 
 from .helpers import safe_get
-
 from datetime import datetime
 
 # ==========================================================
 # MAIN MATCH PARSER
 # ==========================================================
+
+# requirements - Dict of matches 
+# returns a list of parsed matches
 
 def parse_matches(matches):
 
@@ -301,3 +303,15 @@ def extract_kill_events(match, context):
 
     return parsed
 
+
+def parse_stored_data(data):
+    
+    match_ids = []
+    
+    for match in data:
+        match_id = safe_get(match, "meta", "id", default={})
+        
+        match_ids.append(match_id)
+
+
+    return match_ids
