@@ -105,3 +105,23 @@ def get_match_by_id(match_id):
     match = response.json().get("data")
         
     return match
+
+def get_contents():
+    session = get_session()
+    url = f"{BASE_URL}/v1/content"
+    try:
+        response = session.get(url)
+        response.raise_for_status()
+        
+        
+        content = response.json().get("data", {})
+        
+        if not content:
+            logger.info(f"No Acts Found.")
+            return None
+        
+        return content
+    
+    except requests.exceptions.RequestException as e:
+        logger.warning(f"Failed to fetch Contents: {e}")
+        return None

@@ -383,3 +383,98 @@ def insert_kill_events(conn, kills):
 
         raise
 
+
+def insert_episodes(conn, episodes):
+    
+    query = f"""
+        INSERT INTO episodes ( 
+            episode_id,
+            episode_name
+        ) VALUES %s
+        ON CONFLICT (episode_id) DO NOTHING
+        """
+
+    try:
+        rows = [
+            (
+                e["episode_id"],
+                e["episode_name"]
+            )
+            for e in episodes
+        ]    
+        
+        if not rows:
+            logger.warning("No episodes to insert")
+            return
+
+        with conn.cursor() as cursor:
+
+            execute_values(cursor, query, rows)
+
+            inserted = cursor.rowcount
+            attempted = len(rows)
+            skipped = attempted - inserted
+
+        conn.commit()
+
+        logger.info(f"Episodes attempted: {attempted} | Episodes inserted: {inserted} | Episodes skipped (duplicates): {skipped}")
+
+    except psycopg2.Error as e:
+
+        conn.rollback()
+
+        logger.error("insert_episodes failed")
+        logger.error(e)
+
+        raise
+    
+    
+def insert_acts(conn, acts):
+    
+    query = f"""
+        INSERT INTO acts ( 
+            act_id,
+            act_name,
+            episode_id,
+            is_active,
+            is_previous
+        ) VALUES %s
+        ON CONFLICT (act_id) DO NOTHING
+        """
+
+    try:
+        rows = [
+            (
+                a["act_id"],
+                a["act_name"],
+                a["episode_id"],
+                a["is_active"],
+                a["is_previous"]
+            )
+            for a in acts
+        ]    
+        
+        if not rows:
+            logger.warning("No acts to insert")
+            return
+
+        with conn.cursor() as cursor:
+
+            execute_values(cursor, query, rows)
+
+            inserted = cursor.rowcount
+            attempted = len(rows)
+            skipped = attempted - inserted
+
+        conn.commit()
+
+        logger.info(f"Acts attempted: {attempted} | Acts inserted: {inserted} | Acts skipped (duplicates): {skipped}")
+
+    except psycopg2.Error as e:
+
+        conn.rollback()
+
+        logger.error("insert_acts failed")
+        logger.error(e)
+
+        raise

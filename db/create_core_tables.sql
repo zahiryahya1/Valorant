@@ -179,7 +179,7 @@ CREATE TABLE session_matches (
 -- ==========================================
 CREATE TABLE episodes (
     episode_id TEXT PRIMARY KEY,
-    name TEXT NOT NULL
+    episode_name TEXT NOT NULL
 );
 
 

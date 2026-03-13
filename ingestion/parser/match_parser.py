@@ -321,3 +321,32 @@ def parse_stored_data(data):
     return match_ids
 
 
+# ==========================================================
+# EXTRACTS EPISODE AND ACTS
+# ==========================================================
+
+def parse_episode_and_acts(content):
+    acts_data = safe_get(content, "acts", default=[])
+    
+    episodes = {}
+    acts = []
+    
+    for item in acts_data:
+        
+        if item["type"] == "episode":
+            episodes[item["id"]] = {
+                "episode_id": item["id"],
+                "episode_name": item["name"]
+            }
+        
+        elif item["type"] == "act":
+
+            acts.append({
+                "act_id": item["id"],
+                "act_name": item["name"],
+                "episode_id": item["parentId"],
+                "is_active": item["isActive"],
+                "is_previous": False
+            })
+            
+    return list(episodes.values()), acts

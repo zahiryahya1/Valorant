@@ -1,4 +1,4 @@
-from ingestion.parser.match_parser import parse_matches, parse_stored_data
+from ingestion.parser.match_parser import parse_stored_data
 from clients.valorant_api import get_match_by_id
 
 import json
