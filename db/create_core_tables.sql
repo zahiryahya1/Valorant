@@ -174,3 +174,23 @@ CREATE TABLE session_matches (
     FOREIGN KEY (match_id) REFERENCES matches(match_id)
 );
 
+-- ==========================================
+-- EPISODES
+-- ==========================================
+CREATE TABLE episodes (
+    episode_id TEXT PRIMARY KEY,
+    name TEXT NOT NULL
+);
+
+
+-- ==========================================
+-- ACTS
+-- ==========================================
+CREATE TABLE acts (
+    act_id TEXT PRIMARY KEY,
+    act_name TEXT NOT NULL,
+    episode_id TEXT NOT NULL,
+    is_active BOOLEAN,
+    is_previous BOOLEAN,
+    FOREIGN KEY (episode_id) REFERENCES episodes(id)
+);

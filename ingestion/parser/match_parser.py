@@ -304,6 +304,10 @@ def extract_kill_events(match, context):
     return parsed
 
 
+# ==========================================================
+# EXTRACTS MATCH HISTORY GAME ID'S
+# ==========================================================
+
 def parse_stored_data(data):
     
     match_ids = []
@@ -315,3 +319,5 @@ def parse_stored_data(data):
 
 
     return match_ids
+
+

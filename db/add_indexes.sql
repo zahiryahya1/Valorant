@@ -26,6 +26,8 @@ ON kill_events(victim_puuid);
 CREATE INDEX idx_damage_events_match
 ON damage_events(match_id);
 
+CREATE INDEX idx_acts_episode_id
+ON acts(episode_id);
 
 
 -- ==========================================
