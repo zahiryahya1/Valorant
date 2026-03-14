@@ -64,7 +64,7 @@ def insert_matches(conn, matches):
 
         conn.commit()
 
-        logger.info(f"Matches attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+        logger.info(f"Matches attempted: {attempted} | Matches inserted: {inserted} | Matches skipped (duplicates): {skipped}")
 
     except psycopg2.Error as e:
 
@@ -114,7 +114,7 @@ def insert_players(conn, players):
 
         conn.commit()
 
-        logger.info(f"Players attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+        logger.info(f"Players attempted: {attempted} | Players inserted: {inserted} | Players skipped (duplicates): {skipped}")
 
     except psycopg2.Error as e:
 
@@ -194,7 +194,7 @@ def insert_player_match_stats(conn, stats):
 
         conn.commit()
 
-        logger.info(f"Player match stats attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+        logger.info(f"Player match stats attempted: {attempted} | Player match stats inserted: {inserted} | Player match stats skipped (duplicates): {skipped}")
 
     except psycopg2.Error as e:
 
@@ -246,7 +246,7 @@ def insert_rounds(conn, rounds):
 
         conn.commit()
 
-        logger.info(f"Rounds attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+        logger.info(f"Rounds attempted: {attempted} | Rounds attempted inserted: {inserted} | Rounds attempted skipped (duplicates): {skipped}")
 
     except psycopg2.Error as e:
 
@@ -309,7 +309,7 @@ def insert_damage_events(conn, dmg_events):
 
         conn.commit()
 
-        logger.info(f"Damage events attempted: {attempted} | kill events inserted: {inserted} | kill events skipped (duplicates): {skipped}")
+        logger.info(f"Damage events attempted: {attempted} | Damage events inserted: {inserted} | Damage events skipped (duplicates): {skipped}")
 
     except psycopg2.Error as e:
 

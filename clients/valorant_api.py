@@ -3,12 +3,13 @@ import os
 import requests
 from dotenv import load_dotenv
 from typing import Optional, Tuple, Dict, Any
+import logging
 
 # -----------------------------
 # Load environment variables
 # -----------------------------
 load_dotenv()
-logger = setup_logger()
+logger = logging.getLogger(__name__)
 API_KEY = os.getenv("HENRIKDEV_API_KEY")
 BASE_URL = "https://api.henrikdev.xyz/valorant"
 
@@ -72,14 +73,11 @@ def get_stored_matches(region: str, puuid: str) -> Optional[Dict[str, Any]]:
         logger.warning("Region or PUUID not provided")
         return None
     session = get_session()
-    url = f"{BASE_URL}/valorant/v1/by-puuid/stored-matches/{region}/{puuid}"
+    url = f"{BASE_URL}/v1/by-puuid/stored-matches/{region}/{puuid}"
     try:
         response = session.get(url)
         response.raise_for_status()
         
-        match_count = response.get("results").get("total")
-        
-        logger.info(f"Fetched: {match_count} Matches")
         matches = response.json().get("data", {})
         
         if not matches:

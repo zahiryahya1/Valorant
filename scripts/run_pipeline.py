@@ -3,9 +3,10 @@ import logging
 from config.logging import setup_logger
 
 from ingestion.transform.normalize import normalize_tables
-from clients.valorant_api import get_user_account_data, get_matches_by_puuid
-from ingestion.parser.parser import parse_matches
+from clients.valorant_api import get_user_account_data, get_matches_by_puuid, get_stored_matches, get_match_by_id
+from ingestion.parser.parser import parse_matches, parse_stored_matches
 from db.insert import *
+from db.fetch import get_current_season
 from db.connection import get_connection
 
 # --- Entry Point for your Main App ---
@@ -19,31 +20,50 @@ if __name__ == "__main__":
 
     # Step 1: Get ID/Region
     logger.info("Starting match ingestion pipeline")
+    conn = get_connection()
+
     
     puuid, region, e = get_user_account_data(name_input, tag_input)
 
 
     if puuid and region:
         
-        logger.info(f"Fetched account data - PUUID: {puuid}, Region: {region}.\nNow fetching Matches")
+        logger.info(f"Fetched account data - PUUID: {puuid}, Region: {region}. Now fetching Matches")
         
         # Step 2: Get Matches using the ID from Step 1
-        raw_matches = get_matches_by_puuid(region, puuid)
+        stored_matches = get_stored_matches(region, puuid)
         
-        if raw_matches is None:
-            logger.info("Failed to fetch matches. Exiting.")
+        if stored_matches is None:
             exit(1)
         
-        # step 3: Parse Matches
+        # Step 3: Get season or previous season
+
+        season_id = get_current_season(conn)
+        
+        match_ids = parse_stored_matches(season_id, stored_matches)
+        
+        if match_ids is None:
+            logger.info("Failed to fetch this seasons matches. Exiting.")
+            exit(1)
+        
+        
         try:
+            # step 4: get match data & parse them
+            raw_matches = []
+            for id in match_ids:
+                raw_matches.append(get_match_by_id(id))
+            
+
             parsed_matches = parse_matches(raw_matches)
+            
             logger.info(f"Parsed {len(parsed_matches)} matches")
+            
         except Exception as e:
             logger.error(f"Error occurred while parsing matches: {e}")
             exit(1)
 
         # step 4: Store Parsed Data
-        with open("./data/processed/parsed_matches.json", "w", encoding="utf-8") as f:
+        with open("./data/processed/parsed_season_matches.json", "w", encoding="utf-8") as f:
             json.dump(parsed_matches, f, ensure_ascii=False, indent=4, default=str)
         
     else:
@@ -57,8 +77,6 @@ if __name__ == "__main__":
     for table_name, records in tables.items():
         logger.info(f"Table: {table_name}, Number of Records: {len(records)}")
         
-    conn = get_connection()
-
     
     insert_players(conn, tables["players"])
 
