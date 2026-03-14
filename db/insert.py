@@ -1,6 +1,5 @@
 from venv import logger
 from psycopg2.extras import execute_values
-from config.logging import setup_logger
 
 import psycopg2
 import logging
