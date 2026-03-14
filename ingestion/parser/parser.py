@@ -304,21 +304,6 @@ def extract_kill_events(match, context):
     return parsed
 
 
-# ==========================================================
-# EXTRACTS MATCH HISTORY GAME ID'S
-# ==========================================================
-
-def parse_stored_data(data):
-    
-    match_ids = []
-    
-    for match in data:
-        match_id = safe_get(match, "meta", "id", default={})
-        
-        match_ids.append(match_id)
-
-
-    return match_ids
 
 
 # ==========================================================
@@ -351,7 +336,21 @@ def parse_episode_and_acts(content):
             
     return list(episodes.values()), acts
 
-def parse_stored_matches():
+
+# ==========================================================
+# EXTRACTS MATCH HISTORY GAME ID'S
+# ==========================================================
+
+def parse_stored_matches(season_id, matches):
     
     match_ids = []
+    
+    for match in matches:
+        match_season = safe_get(match, "meta", "season", "id", default=0)
+        
+        if match_season == season_id:
+            match_id = safe_get(match, "meta", "id", default=0)
+            match_ids.append(match_id)
+        
+
     return match_ids
