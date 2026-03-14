@@ -4,7 +4,7 @@ from config.logging import setup_logger
 
 from ingestion.transform.normalize import normalize_tables
 from clients.valorant_api import get_user_account_data, get_matches_by_puuid
-from ingestion.parser.match_parser import parse_matches
+from ingestion.parser.parser import parse_matches
 from db.insert import *
 from db.connection import get_connection
 

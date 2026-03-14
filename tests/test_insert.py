@@ -1,4 +1,4 @@
-from ingestion.parser.match_parser import parse_matches
+from ingestion.parser.parser import parse_matches
 from db.connection import get_connection
 from ingestion.transform.normalize import normalize_tables
 from db.insert import *

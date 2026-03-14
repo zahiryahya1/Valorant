@@ -1,4 +1,4 @@
-from ingestion.parser.match_parser import parse_episode_and_acts
+from ingestion.parser.parser import parse_episode_and_acts
 from db.connection import get_connection
 from db.insert import insert_episodes, insert_acts
 from config.logging import setup_logger
