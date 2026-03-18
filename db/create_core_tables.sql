@@ -35,7 +35,7 @@ CREATE TABLE matches (
 
 
 -- ==========================================
--- MATCH PLAYERS
+-- PLAYERS MATCH STATS
 -- ==========================================
 -- One row per player per match
 
