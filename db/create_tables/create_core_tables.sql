@@ -192,5 +192,5 @@ CREATE TABLE acts (
     episode_id TEXT NOT NULL,
     is_active BOOLEAN,
     is_previous BOOLEAN,
-    FOREIGN KEY (episode_id) REFERENCES episodes(id)
+    FOREIGN KEY (episode_id) REFERENCES episodes(episode_id)
 );

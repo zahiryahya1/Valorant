@@ -14,6 +14,7 @@ CREATE TABLE dim_periods (
     act TEXT,
     year INT,
     month INT,
+    last_updated TIMESTAMP,
     
     PRIMARY KEY (period_type, period_id)
 
@@ -69,6 +70,8 @@ CREATE TABLE player_period_stats (
     highest_kill_game INT,
     highest_damage_game INT,
 
+    last_updated TIMESTAMP,
+
     PRIMARY KEY (period_type, period_id, puuid, queue_scope)
 );
 
@@ -97,6 +100,8 @@ CREATE TABLE player_agent_period_stats (
     kd_ratio FLOAT,
 
     avg_damage FLOAT,
+
+    last_updated TIMESTAMP,
 
     PRIMARY KEY (period_type, period_id, puuid, agent, queue_scope)
 );
@@ -128,6 +133,8 @@ CREATE TABLE player_map_period_stats (
     match_mvp_count INT,
     team_mvp_count INT,
 
+    last_updated TIMESTAMP,
+
     PRIMARY KEY (period_type, period_id, puuid, map_name, queue_scope)
 );
 
@@ -150,6 +157,8 @@ CREATE TABLE player_weapon_period_stats (
     legshots INT,
 
     headshot_percent FLOAT,
+
+    last_updated TIMESTAMP,
 
     PRIMARY KEY (period_type, period_id, puuid, weapon, queue_scope)
 );
@@ -175,6 +184,8 @@ CREATE TABLE player_side_period_stats (
     deaths INT,
     assists INT,
     damage INT,
+
+    last_updated TIMESTAMP,
 
     PRIMARY KEY (period_type, period_id, puuid, side, queue_scope)
 );
@@ -206,6 +217,8 @@ CREATE TABLE player_highlight_period_stats (
     total_multikills INT,
     clutch_wins INT,
     total_aces INT,
+
+    last_updated TIMESTAMP,
 
     PRIMARY KEY (period_type, period_id, puuid, queue_scope)
 );
