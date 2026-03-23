@@ -15,4 +15,17 @@ select * from episodes;
 select * from acts;
 
 select * from player_period_stats;
-select * from acts;
+
+select * from acts where act_id like '%3ea2b318%';
+
+select * from episodes;
+
+select acts.*, episodes.episode_name
+from acts
+join episodes on acts.episode_id = episodes.episode_id;
+
+select * from matches;
+
+select * from dim_periods;
+
+

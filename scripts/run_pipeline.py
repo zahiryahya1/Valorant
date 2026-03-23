@@ -6,7 +6,7 @@ from ingestion.transform.normalize import normalize_tables
 from clients.valorant_api import get_user_account_data, get_matches_by_puuid, get_stored_matches, get_match_by_id
 from ingestion.parser.parser import parse_matches, parse_stored_matches
 from db.insert import *
-from db.fetch import get_current_season
+from db.fetch import *
 from db.connection import get_connection
 
 # --- Entry Point for your Main App ---
@@ -38,10 +38,12 @@ if __name__ == "__main__":
         
         # Step 3: Get season or previous season
 
-        season_id = get_current_season(conn)
+        season_id = get_previous_season(conn)
         
         match_ids = parse_stored_matches(season_id, stored_matches)
         
+        logger.info(f"User played {len(match_ids)} matches the previous ACT.")
+
         if match_ids is None:
             logger.info("Failed to fetch this seasons matches. Exiting.")
             exit(1)

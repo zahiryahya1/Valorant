@@ -17,6 +17,8 @@ match_ids = parse_stored_matches(season_id, stored_matches["data"])
 
 matches = []
 
+print(season_id)
+
 for id in match_ids:
     print("id: ", id)
 exit()

@@ -65,7 +65,7 @@ def get_previous_season(conn):
     
     season_id = row[0]
     
-    logger.info(f"Current season id retrieved: {season_id}")
+    logger.info(f"Previous season id retrieved: {season_id}")
     
     return season_id
     
