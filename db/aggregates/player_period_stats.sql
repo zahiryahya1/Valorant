@@ -2,6 +2,8 @@
 -- PLAYER PERIOD STATS (FINAL VERSION)
 -- ==========================================
 
+TRUNCATE TABLE player_period_stats;
+
 INSERT INTO player_period_stats (
     period_type,
     period_id,
@@ -64,7 +66,10 @@ WITH base AS (
         m.date_played,
 
         dp.period_type,
-        dp.period_id
+        dp.period_id,
+		
+		COALESCE(rnd.bombs_planted,0) AS bombs_planted,
+        COALESCE(rnd.bombs_defused,0) AS bombs_defused
 
     FROM player_match_stats pms
     JOIN matches m 
@@ -73,6 +78,8 @@ WITH base AS (
         ON m.date_played BETWEEN dp.start_date AND dp.end_date
     LEFT JOIN dim_ranks r
         ON pms.rank = r.rank_name
+	LEFT JOIN rounds rnd
+		ON rnd.match_id = pms.match_id
 ),
 
 scoped AS (
@@ -117,10 +124,10 @@ aggregated AS (
         COUNT(DISTINCT match_id) AS matches_played,
         SUM(CASE WHEN won THEN 1 ELSE 0 END) AS wins,
         SUM(CASE WHEN NOT won THEN 1 ELSE 0 END) AS losses,
-        AVG(CASE WHEN won THEN 1.0 ELSE 0.0 END) AS win_rate,
+        ROUND(AVG(CASE WHEN won THEN 1.0 ELSE 0.0 END), 2) AS win_rate,
 
         SUM(rounds_played) AS total_rounds,
-        SUM(game_length_sec) / 3600.0 AS total_hours,
+        ROUND( SUM(game_length_sec) / 3600.0, 2) AS total_hours,
 
         SUM(kills) AS total_kills,
         SUM(deaths) AS total_deaths,
@@ -129,23 +136,23 @@ aggregated AS (
 
         SUM(kills)::FLOAT / NULLIF(SUM(deaths), 0) AS kd_ratio,
 
-        0 AS bombs_planted,
-        0 AS bombs_defused,
+        SUM(bombs_planted) AS bombs_planted,
+		SUM(bombs_defused) AS bombs_defused,
 
         SUM(headshots) AS headshots,
         SUM(bodyshots) AS bodyshots,
         SUM(legshots) AS legshots,
 
-        SUM(headshots)::FLOAT /
-        NULLIF(SUM(headshots + bodyshots + legshots), 0) AS headshot_percent,
+		SUM(headshots)::FLOAT /
+        	NULLIF(SUM(headshots + bodyshots + legshots), 0) AS headshot_percent,
 
         0 AS first_bloods,
         0 AS aces,
         0 AS match_mvps,
         0 AS team_mvps,
 
-        AVG(kills) AS avg_kills_per_match,
-        AVG(damage) AS avg_damage_per_match,
+        ROUND( AVG(kills), 0) AS avg_kills_per_match,
+        ROUND( AVG(damage), 0) AS avg_damage_per_match,
 
         MAX(kills) AS highest_kill_game,
         MAX(damage) AS highest_damage_game,
