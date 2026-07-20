@@ -258,5 +258,3 @@ SELECT
     last_updated
 FROM final;
 
-select * from player_period_stats
-where puuid = 'f9f26d15-776c-57a0-b6bf-be1fc1d3c443';

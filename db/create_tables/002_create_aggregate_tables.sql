@@ -9,7 +9,7 @@ CREATE TABLE player_period_stats (
     period_id TEXT,
     puuid TEXT,
 
-    queue_scope TEXT, -- 'all' or 'competative'
+    queue_scope TEXT, -- 'all' or 'competitive'
     initial_rank TEXT,
     peak_rank TEXT,
     end_rank TEXT,
@@ -64,7 +64,7 @@ CREATE TABLE player_agent_period_stats (
     period_id TEXT,
     puuid TEXT,
     agent TEXT,
-    queue_scope TEXT, -- 'all' or 'competative'
+    queue_scope TEXT, -- 'all' or 'competitive'
     
     pick_count INT,
     matches_played INT,
@@ -95,7 +95,7 @@ CREATE TABLE player_map_period_stats (
     period_id TEXT,
     puuid TEXT,
     map_name TEXT,
-    queue_scope TEXT, -- 'all' or 'competative'
+    queue_scope TEXT, -- 'all' or 'competitive'
 
     matches_played INT,
     wins INT,
@@ -128,7 +128,7 @@ CREATE TABLE player_weapon_period_stats (
     period_id TEXT,
     puuid TEXT,
     weapon TEXT,
-    queue_scope TEXT, -- 'all' or 'competative'
+    queue_scope TEXT, -- 'all' or 'competitive'
 
     kills INT,
     headshots INT,
@@ -153,7 +153,7 @@ CREATE TABLE player_side_period_stats (
     period_id TEXT,
     puuid TEXT,
     side TEXT,
-    queue_scope TEXT, -- 'all' or 'competative'
+    queue_scope TEXT, -- 'all' or 'competitive'
 
     rounds_played INT,
     rounds_won INT,
@@ -179,7 +179,7 @@ CREATE TABLE player_highlight_period_stats (
     period_type TEXT,
     period_id TEXT,
     puuid TEXT,
-    queue_scope TEXT, -- 'all' or 'competative'
+    queue_scope TEXT, -- 'all' or 'competitive'
 
     best_match_id TEXT,
     best_match_kills INT,
