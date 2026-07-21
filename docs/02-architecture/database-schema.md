@@ -10,10 +10,24 @@ The database is organized into three logical layers.
 
 This separation reduces redundancy while supporting efficient analytical queries.
 
----
+----
 
 # Schema Overview
-[Create Mermaid flowchart]
+
+```mermaid
+flowchart LR
+
+A[HenrikDev API]
+
+A --> B[Core Tables]
+
+B --> C[Dimension Tables]
+
+B --> D[Analytics Tables]
+```
+
+---
+
 
 # Core Tables
 
@@ -61,9 +75,30 @@ These tables contain precomputed statistics for fast reporting.
 ---
 
 # Data Lifecycle
-[Insert Mermaid flowchart]
 
-API --> Core Tables --> Aggregate Computation --> Analytics Tables --> Frontend
+```mermaid
+flowchart TD
+
+API
+
+↓
+
+Core Tables
+
+↓
+
+Aggregate Computation
+
+↓
+
+Analytics Tables
+
+↓
+
+Frontend
+```
+
+---
 
 # Design Principles
 
