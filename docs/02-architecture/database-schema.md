@@ -15,19 +15,13 @@ This separation reduces redundancy while supporting efficient analytical queries
 # Schema Overview
 
 ```mermaid
-flowchart LR
-
-A[HenrikDev API]
-
-A --> B[Core Tables]
-
-B --> C[Dimension Tables]
-
-B --> D[Analytics Tables]
-```
+flowchart TD
+    API --> CoreTables[Core Tables]
+    CoreTables --> AggregateComputation[Aggregate Computation]
+    AggregateComputation --> AnalyticsTables[Analytics Tables]
+    AnalyticsTables --> Frontend
 
 ---
-
 
 # Core Tables
 
