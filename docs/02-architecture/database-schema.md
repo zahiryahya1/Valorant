@@ -78,31 +78,14 @@ These tables contain precomputed statistics for fast reporting.
 
 ```mermaid
 flowchart TD
+
     API --> CoreTables[Core Tables]
+
     CoreTables --> AggregateComputation[Aggregate Computation]
+
     AggregateComputation --> AnalyticsTables[Analytics Tables]
+
     AnalyticsTables --> Frontend
-
-```mermaid
-flowchart TD
-
-API
-
-↓
-
-Core Tables
-
-↓
-
-Aggregate Computation
-
-↓
-
-Analytics Tables
-
-↓
-
-Frontend
 ```
 
 ---
