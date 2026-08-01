@@ -261,16 +261,14 @@ Users should not need to understand:
 
 They should only experience:
 
-```
-Enter Riot ID
+```mermaid
+flowchart LR
 
-↓
+A[Enter Riot ID]
 
-Generate Recap
+A --> B[Generate Recap]
 
-↓
-
-Discover Your Season
+B --> C[Discover Your Season]
 ```
 
 The complexity belongs behind the scenes.
