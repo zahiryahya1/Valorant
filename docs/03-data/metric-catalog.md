@@ -30,17 +30,17 @@ Each metric is categorized by business domain and assigned a priority for implem
 
 ---
 
-# Season Summary
+# Act Summary
 
 | ID | Metric | Priority | Status | Notes |
 |----|--------|----------|--------|------|
-| SS-001 | Matches Played | Must | Planned | Core recap statistic |
-| SS-002 | Wins | Must | Planned | |
-| SS-003 | Losses | Must | Planned | |
-| SS-004 | Win Rate | Must | Planned | |
-| SS-005 | Total Hours Played | Must | Planned | Derived from match duration |
-| SS-006 | Total Rounds Played | Must | Planned | |
-| SS-007 | Average Match Length | Should | Planned | |
+| AS-001 | Matches Played | Must | Planned | Core recap statistic |
+| AS-002 | Wins | Must | Planned | |
+| AS-003 | Losses | Must | Planned | |
+| AS-004 | Win Rate | Must | Planned | |
+| AS-005 | Total Hours Played | Must | Planned | Derived from match duration |
+| AS-006 | Total Rounds Played | Must | Planned | |
+| AS-007 | Average Match Length | Should | Planned | |
 
 ---
 
@@ -48,11 +48,11 @@ Each metric is categorized by business domain and assigned a priority for implem
 
 | ID | Metric | Priority | Status | Notes |
 |----|--------|----------|--------|------|
-| CP-001 | Starting Rank | Must | Planned | |
-| CP-002 | Peak Rank | Must | Planned | |
-| CP-003 | Ending Rank | Must | Planned | |
-| CP-004 | Median Rank | Must | Planned | Rank with the most time spent |
-| CP-005 | Rank Progression | Should | Planned | Animated timeline |
+| COMP-001 | Starting Rank | Must | Planned | |
+| COMP-002 | Peak Rank | Must | Planned | |
+| COMP-003 | Ending Rank | Must | Planned | |
+| COMP-004 | Median Rank | Must | Planned | Rank with the most time spent |
+| COMP-005 | Rank Progression | Should | Planned | Animated timeline |
 
 ---
 
@@ -60,18 +60,17 @@ Each metric is categorized by business domain and assigned a priority for implem
 
 | ID | Metric | Priority | Status | Notes |
 |----|--------|----------|--------|------|
-| COM-001 | Kills | Must | Planned | |
-| COM-002 | Deaths | Must | Planned | |
-| COM-003 | Assists | Must | Planned | |
-| COM-004 | K/D Ratio | Must | Planned | |
-| COM-005 | Damage | Must | Planned | |
-| COM-006 | Average Kills per Match | Must | Planned | |
-| COM-007 | Average Damage per Match | Must | Planned | |
-| COM-008 | Headshots | Must | Planned | |
-| COM-009 | Headshot Percentage | Must | Planned | |
-| COM-010 | Bodyshots | Must | Planned | |
-| COM-011 | Legshots | Must | Planned | |
-| COM-012 | Accuracy Percentage | Must | Planned | |
+| CP-001 | Kills | Must | Planned | |
+| CP-002 | Deaths | Must | Planned | |
+| CP-003 | Assists | Must | Planned | |
+| CP-004 | K/D Ratio | Must | Planned | |
+| CP-005 | Damage | Must | Planned | |
+| CP-006 | Average Kills per Match | Must | Planned | |
+| CP-007 | Average Damage per Match | Must | Planned | |
+| CP-008 | Headshots | Must | Planned | |
+| CP-009 | Headshot Percentage | Must | Planned | |
+| CP-010 | Bodyshots | Must | Planned | |
+| CP-011 | Legshots | Must | Planned | |
 
 ---
 
@@ -79,15 +78,23 @@ Each metric is categorized by business domain and assigned a priority for implem
 
 | ID | Metric | Priority | Status | Notes |
 |----|--------|----------|--------|------|
-| AG-001 | Most Played Agent | Must | Planned | |
-| AG-002 | Best Win Rate Agent | Must | Planned | |
-| AG-003 | Worst Agent | Must | Planned | |
+| AG-001 | Matches by Agent | Must | Planned | |
+| AG-002 | Wins by Agent | Must | Planned | |
+| AG-003 | Losses by Agent | Must | Planned | |
 | AG-004 | Win Rate by Agent | Must | Planned | |
-| AG-005 | K/D by Agent | Must | Planned | |
-| AG-006 | Matches by Agent | Must | Planned | |
-| AG-007 | Most Improved Agent | Future | Future | |
-| AG-008 | Role Preference | Future | Future | Preferred role distribution |
-| AG-009 | Flexibility Score | Future | Future | Agent diversity |
+| AG-005 | Kills by Agent | Must | Planned | |
+| AG-006 | Deahts by Agent | Must | Planned | |
+| AG-007 | Assists by Agent | Must | Planned | |
+| AG-008 | K/D by Agent | Must | Planned | |
+| AG-009 | Damage by Agent | Must | Planned | |
+| AG-0010 | Average DMG by Agent | Must | Planned | |
+| AG-0011 | Most Played Agent | Must | Planned | |
+| AG-0012 | Best Win Rate Agent | Must | Planned | |
+| AG-0013 | Worst Win Rate Agent | Must | Planned | |
+| AG-0014 | Most Improved Agent | Future | Future | |
+| AG-0015 | Role Preference | Future | Future | Preferred role distribution |
+| AG-0016| Flexibility Score | Future | Future | Agent diversity |
+
 
 ---
 
@@ -156,11 +163,12 @@ Each metric is categorized by business domain and assigned a priority for implem
 | HL-006 | Team MVP Count | Must | Planned | |
 | HL-007 | Total Aces | Should | Planned | |
 | HL-008 | Best Match | Should | Planned | |
-| HL-009 | Most Clutch Match | Future | Future | |
-| HL-010 | Times Carried | Future | Future | |
-| HL-011 | Largest Comeback | Future | Future | |
-| HL-012 | Number of Comebacks | Future | Future | |
-| HL-013 | Number of Blunders | Future | Future | Lost after large lead |
+| HL-009 | Performance Score | Should | Planned | Composite player impact metric |
+| HL-010 | Most Clutch Match | Should | Planned | |
+| HL-011 | Carry Games | Future | Planned | Derived from performance score |
+| HL-012 | Largest Comeback | Should | Planned | |
+| HL-013 | Comebacks | Should | Possible | Requires round sequence analysis |
+| HL-014 | Throws | Should | Possible | Lost after large lead. Requires round sequence analysis |
 
 ---
 
@@ -198,13 +206,13 @@ Release 1 examples:
 - Fighter
 - Controller Specialist
 - Marathon Grinder
-- Clutch Performer
 
 Future:
 
 - Player archetypes
 - Multiple personality dimensions
 - Achievement badges
+- Clutch Performer
 
 ---
 
@@ -229,3 +237,11 @@ Future:
 - Rank Progression Across Seasons
 - Lifetime Agent Usage
 - Long-Term Trends
+
+
+## Related Documentation
+
+- Product Vision
+- Feature Catalog
+- Analytics Requirements
+- Database Schema

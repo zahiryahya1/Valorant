@@ -9,7 +9,7 @@ CREATE TABLE player_period_stats (
     period_id TEXT,
     puuid TEXT,
 
-    queue_scope TEXT, -- 'all' or 'competitive'
+    queue_scope TEXT, -- 'all' or 'competitive' or unrated??
     initial_rank TEXT,
     peak_rank TEXT,
     end_rank TEXT,
@@ -66,7 +66,6 @@ CREATE TABLE player_agent_period_stats (
     agent TEXT,
     queue_scope TEXT, -- 'all' or 'competitive'
     
-    pick_count INT,
     matches_played INT,
     wins INT,
     losses INT,
@@ -78,6 +77,7 @@ CREATE TABLE player_agent_period_stats (
 
     kd_ratio FLOAT,
 
+    total_damage INT,
     avg_damage FLOAT,
 
     last_updated TIMESTAMP,
