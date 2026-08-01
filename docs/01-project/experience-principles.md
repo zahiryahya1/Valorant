@@ -176,28 +176,18 @@ The recap should reveal information gradually.
 
 The user should experience a journey:
 
-```
-Introduction
+```mermaid
+flowchart LR
 
-↓
+A[Introduction]
 
-Season Overview
+A --> B[Season Overview]
 
-↓
+B --> C[Performance Highlights]
 
-Performance Highlights
+C --> D[Unexpected Insights]
 
-↓
-
-Unexpected Insights
-
-↓
-
-Personal Records
-
-↓
-
-Shareable Summary
+D --> E[Personal Records]
 ```
 
 Information should be revealed rather than presented all at once.
